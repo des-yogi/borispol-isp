@@ -1,9 +1,24 @@
-// В этом файле должны быть стили для БЭМ-блока user-nav, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока user-nav, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .user-nav {
+  background: radial-gradient(337.42px at 0% 0%, #57A6F0 0%, #6DC4F8 100%);
 
   $block-name:                &; // #{$block-name}__element
 
+  &__phones {
+  }
+
+  &__phone-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__text {
+  }
+
+  &__tel {
+  }
 }
