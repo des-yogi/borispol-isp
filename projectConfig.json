@@ -55,14 +55,21 @@
     "object-fit-polyfill": [],
     "embed-responsive": [],
     "pie-chart": [],
-    "fields-group": []
+    "fields-group": [],
+    "request": [],
+    "user-nav": [],
+    "main": [],
+    "action": [],
+    "news": [],
+    "social-links": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+    "../../node_modules/owl.carousel/dist/assets/owl.theme.default.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"

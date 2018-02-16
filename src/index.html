@@ -15,98 +15,190 @@
     <div class="page__content">
 
       <div class="container">
-        <header id="header" class="page-header">
-          <section class="page-header__nav">
-            <div id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></div>
-            <div class="logo">
-              <a href="/" class="logo__link">
-                <img src="img/borispol-logo.svg" width="110" height="50" alt="Борисполь ISP">
-              </a>
-            </div>
-            <nav id="main-nav" class="main-nav" role="navigation">
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Акции</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Тарифы</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Абоненту</a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-                    <ul class="main-nav__list  main-nav__list--lvl-2">
-                      <li class="main-nav__item  main-nav__item--lvl-2">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                          Мой кабинет
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-2">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                          Оплата
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-2">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                          Правила
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-2">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                          Проверка скорости
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Покрытие</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="" class="main-nav__link">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </section>
-          <section class="user-nav">
-            <div class="user-nav__phones">
-              <ul class="user-nav__phone-list">
-                <li>
-                  <span class="user-nav__text">Отдел <br>продаж</span>
-                </li>
-                <li>
-                  <a href="tel:+380459567141">(04595) 6-71-41</a>
-                </li>
-                <li>
-                  <a href="tel:+380935061818">(093) 506-18-18</a>
-                </li>
-                <li>
-                  <a href="tel:+380952227141">(095) 222-71-41</a>
-                </li>
-                <li>
-                  <a href="tel:+380961417141">(096) 141-71-41</a>
-                </li>
-              </ul>
-              <ul class="user-nav__phone-list">
-                <li>
-                  <span class="user-nav__text">24/7 <br>техподдержка</span>
-                </li>
-                <li>
-                  <a href="tel:+380503578534">(050) 357-85-34</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="user-nav__utils">
-
-            </div>
-          </section>
-
-        </header><!-- /header -->
+        @@include('blocks/page-header/page-header.html')
       </div>
 
       <main role="main">
 
-        <div class="container" style="background: lightgray; min-height: 100px;">
+        <article class="hero  container">
+          <div id="hero-slider" class="owl-carousel">
+            <section class="owl-carousel__item">
+              <div class="owl-carousel__text">
+                <p class="owl-carousel__para">Подключись к телевидению нового поколения сегодня и получи</p>
+                <h2 class="owl-carousel__title">3 месяца в подарок!</h2>
+                <a href="" class="owl-carousel__link-btn">Заказать</a>
+              </div>
+              <div class="owl-carousel__img-wrapper">
+                <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
+              </div>
+            </section>
+            <section class="owl-carousel__item">
+              <div class="owl-carousel__text">
+                <p class="owl-carousel__para">Подключись к телевидению нового поколения сегодня и получи</p>
+                <h2 class="owl-carousel__title">3 месяца в подарок!</h2>
+                <a href="" class="owl-carousel__link-btn">Заказать</a>
+              </div>
+              <div class="owl-carousel__img-wrapper">
+                <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
+              </div>
+            </section>
+            <section class="owl-carousel__item">
+              <div class="owl-carousel__text">
+                <p class="owl-carousel__para">Подключись к телевидению нового поколения сегодня и получи</p>
+                <h2 class="owl-carousel__title">3 месяца в подарок!</h2>
+                <a href="" class="owl-carousel__link-btn">Заказать</a>
+              </div>
+              <div class="owl-carousel__img-wrapper">
+                <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="request">
+          <div class="container  request__inner">
+            <form id="request-form" class="request__form" name="request-form" action="" method="">
+              <div class="request__part-one">
+                <h2 class="request__title">Заявка на подключение</h2>
+                <div class="request__choice-service">
+                  <span class="request__subtitle">Выберите услугу</span>
+                  <label for="inet-service">Интернет
+                    <input id="inet-service" type="radio" name="service-type" checked>
+                  </label>
+                  <label for="tv-service">Телевидение
+                    <input id="tv-service" type="radio" name="service-type">
+                  </label>
+                </div>
+                <div class="request__select-props">
+                  <span class="request__subtitle">Подключение в</span>
+                  <label for="privat">Частный сектор
+                    <input id="privat" type="radio" name="real-estate-type">
+                  </label>
+                  <label for="apartment">Многоквартирный дом
+                    <input id="apartment" type="radio" name="real-estate-type"checked>
+                  </label>
+                  <label for="office">Для юридических лиц
+                    <input id="office" type="radio" name="real-estate-type">
+                  </label>
+                </div>
+                <div class="request__select-rate">
+                  <span class="request__subtitle">Выберите тариф</span>
+                  <select class="request__select-options" name="rate" required>
+                    <option value="rate-12">Реактивный 12</option>
+                    <option value="rate-20-plus">Реактивный 20*</option>
+                    <option value="rate-25">Реактивный 25</option>
+                    <option value="rate-40">Реактивный 40</option>
+                    <option value="rate-200-plus" selected>Реактивный 200**</option>
+                  </select>
+                </div>
+              </div>
+              <div class="request__part-two">
+                <h3 class="request__address">Адрес подключения</h3>
+                <div class="request__input-wrapper">
+                  <input type="text" name="street" placeholder="Улица" required>
+                  <input type="text" name="house" placeholder="Дом" required>
+                  <input type="text" name="apartment" placeholder="Кв." required>
+                  <span class="info-message"></span>
+                </div>
+                <div class="request__input-wrapper">
+                  <input type="text" name="name" placeholder="ФИО" required>
+                  <span class="info-message"></span>
+                </div>
+                <div class="request__input-wrapper">
+                  <input type="tel" name="tel" placeholder="Телефон" required>
+                  <span class="info-message"></span>
+                </div>
+                <div class="request__input-wrapper">
+                  <input type="email" name="email" placeholder="Email" required>
+                  <span class="info-message"></span>
+                </div>
+                <div class="request__input-wrapper">
+                  <button type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </article>
+
+        <article class="action">
+          <h2 class="action__title">Акции</h2>
+          <div id="actions-slider" class="owl-carousel  action__slider">
+            <article class="action__item">
+              <a class="action__item-link" href="">
+                <div class="action__img-wrapper">
+                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                </div>
+                <div class="action__text">
+                  <h3 class="action__subtitle">АКЦИЯ 1!</h3>
+                  <p class="action__para">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
+                  <a href="" class="action__readmore-link">Поподробнее</a>
+                </div>
+              </a>
+            </article>
+            <article class="action__item">
+              <a href="" class="action__item-link">
+                <div class="action__img-wrapper">
+                  <img src="img/action-img-2.jpg" alt="Акция" width="353" height="200">
+                </div>
+                <div class="action__text">
+                  <h3 class="action__subtitle">АКЦИЯ 2!</h3>
+                  <p class="action__para">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
+                  <a href="" class="action__readmore-link">Поподробнее</a>
+                </div>
+              </a>
+            </article>
+            <article class="action__item">
+              <a href="" class="action__item-link">
+                <div class="action__img-wrapper">
+                  <img src="img/action-img-3.jpg" alt="Акция" width="353" height="200">
+                </div>
+                <div class="action__text">
+                  <h3 class="action__subtitle">АКЦИЯ 3!</h3>
+                  <p class="action__para">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
+                  <a href="" class="action__readmore-link">Поподробнее</a>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="action__btn-wrapper">
+            <a class="action__all-actions-link" href="">Все действующие акции</a>
+          </div>
+        </article>
+
+        <article class="news">
+          <h2 class="news__title">Новости</h2>
+          <div id="news-slider" class="owl-carousel  news__slider">
+            <article class="news__item">
+              <a href="" class="news__item-link">
+                <div class="news__img-wrapper">
+                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                </div>
+                <h4 class="news__subtitle">Новость 1!</h4>
+              </a>
+            </article>
+            <article class="news__item">
+              <a href="" class="news__item-link">
+                <div class="news__img-wrapper">
+                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                </div>
+                <h4 class="news__subtitle">Новость 2!</h4>
+              </a>
+            </article>
+            <article class="news__item">
+              <a href="" class="news__item-link">
+                <div class="news__img-wrapper">
+                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                </div>
+                <h4 class="news__subtitle">Новость 3!</h4>
+              </a>
+            </article>
+          </div>
+          <div class="news__btn-wrapper">
+            <a class="news__all-news-link" href="">Все новости</a>
+          </div>
+        </article>
+
+        <!-- <div class="container" style="background: lightgray; min-height: 100px;">
           <div class="row" style="background: darkkhaki; min-height: 90px;">
               <div class="col" style="background: coral; min-height: 50px; margin:auto;">
                 <div style="background: white; text-align: center;vertical-align: middle;height: 100%; width: 100%;">Content</div>
@@ -118,7 +210,7 @@
                 <div style="background: white; text-align: center;vertical-align: middle;height: 100%; width: 100%;">Content</div>
               </div>
           </div>
-        </div>
+        </div> -->
 
 
       </main>
@@ -132,5 +224,6 @@
   </div>
 
   @@include('_include/page_bottom.html')
+
 </body>
 </html>
