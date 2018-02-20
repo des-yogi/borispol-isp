@@ -5,4 +5,83 @@
 .page-footer {
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: #fefefe;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.29);
+  }
+
+  &__section-wrapper {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  sm,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__common-tel {
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $title-color;
+  }
+
+  &__tel-link {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  &__24h-tel {
+    margin-bottom: 25px;
+  }
+
+  &__email {
+
+  }
+
+  &__email-link {
+
+  }
+
+  &__address {
+    margin-bottom: 25px;
+  }
+
+  &__addr-item {
+
+  }
+
+  &__navigation {
+
+  }
+
+  &__nav-list {
+
+  }
+
+  &__nav-item {
+
+  }
 }
