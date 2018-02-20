@@ -4,6 +4,11 @@
 
 .page-header {
 
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   .logo {
@@ -19,5 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
   }
 }

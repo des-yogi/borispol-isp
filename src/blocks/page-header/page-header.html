@@ -1,9 +1,6 @@
 <!--DEV
-
 Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
 <header id="header" class="page-header">
@@ -58,37 +55,53 @@
       </ul>
     </nav>
   </section>
-  <section class="user-nav">
-    <div class="container  user-nav__phones">
-      <ul class="user-nav__phone-list">
+  <section class="container  user-nav" role="navigation">
+    <div class="user-nav__phones  user-nav__phones">
+      <ul class="user-nav__phone-list  user-nav__phone-list--sale">
         <li class="user-nav__phone-item">
-          <span class="user-nav__text">Отдел <br>продаж</span>
+          <span class="user-nav__text  user-nav__text--sale">Отдел <br>продаж</span>
         </li>
         <li class="user-nav__phone-item">
-          <a class="user-nav__tel" href="tel:+380459567141">(04595) 6-71-41</a>
+          <a class="user-nav__tel-link" href="tel:+380459567141">(04595) 6-71-41</a>
         </li>
         <li class="user-nav__phone-item">
-          <a class="user-nav__tel" href="tel:+380935061818">(093) 506-18-18</a>
+          <a class="user-nav__tel-link" href="tel:+380935061818">(093) 506-18-18</a>
         </li>
         <li class="user-nav__phone-item">
-          <a class="user-nav__tel" href="tel:+380952227141">(095) 222-71-41</a>
+          <a class="user-nav__tel-link" href="tel:+380952227141">(095) 222-71-41</a>
         </li>
         <li class="user-nav__phone-item">
-          <a class="user-nav__tel" href="tel:+380961417141">(096) 141-71-41</a>
+          <a class="user-nav__tel-link" href="tel:+380961417141">(096) 141-71-41</a>
         </li>
       </ul>
-      <ul class="user-nav__phone-list">
+      <ul class="user-nav__phone-list  user-nav__phone-list--support">
         <li class="user-nav__phone-item">
-          <span class="user-nav__text">24/7 <br>техподдержка</span>
+          <span class="user-nav__text  user-nav__text--support">Круглосуточная <br>техподдержка</span>
         </li>
         <li class="user-nav__phone-item">
-          <a class="user-nav__tel" href="tel:+380503578534">(050) 357-85-34</a>
+          <a class="user-nav__tel-link" href="tel:+380503578534">(050) 357-85-34</a>
         </li>
       </ul>
     </div>
 
     <div class="user-nav__utils">
-
+      <ul class="user-nav__utils-list">
+        <li class="user-nav__utils-item">
+          <a href="" class="user-nav__utils-link">
+            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-icon"></use></svg>
+          </a>
+        </li>
+        <li class="user-nav__utils-item">
+          <a href="" class="user-nav__utils-link">
+            <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#faq-icon"></use></svg>
+          </a>
+        </li>
+        <li class="user-nav__utils-item">
+          <a href="" class="user-nav__utils-link  user-nav__utils-link--lang">
+            RU
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 

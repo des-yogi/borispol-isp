@@ -19,34 +19,34 @@
       <main role="main">
 
         <article class="hero  container">
-          <div id="hero-slider" class="owl-carousel">
-            <section class="owl-carousel__item">
-              <div class="owl-carousel__text">
-                <p class="owl-carousel__para">Подключись к телевидению нового поколения сегодня и получи</p>
-                <h2 class="owl-carousel__title">3 месяца в подарок!</h2>
-                <a href="" class="owl-carousel__link-btn">Заказать</a>
+          <div id="hero-slider" class="owl-carousel  hero__slider">
+            <section class="owl-carousel__item  hero__item">
+              <div class="hero__text">
+                <p class="hero__para">Подключись к телевидению нового поколения сегодня и получи…</p>
+                <h2 class="hero__title">3 месяца в подарок!</h2>
+                <a href="" class="hero__link-btn">Заказать</a>
               </div>
-              <div class="owl-carousel__img-wrapper">
+              <div class="hero__img-wrapper">
                 <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
               </div>
             </section>
-            <section class="owl-carousel__item">
-              <div class="owl-carousel__text">
-                <p class="owl-carousel__para">Подключись к телевидению нового поколения сегодня и получи</p>
-                <h2 class="owl-carousel__title">3 месяца в подарок!</h2>
-                <a href="" class="owl-carousel__link-btn">Заказать</a>
+            <section class="owl-carousel__item  hero__item">
+              <div class="hero__text">
+                <p class="hero__para">Подключись к телевидению нового поколения сегодня и получи</p>
+                <h2 class="hero__title">3 месяца в подарок!</h2>
+                <a href="" class="hero__link-btn">Заказать</a>
               </div>
-              <div class="owl-carousel__img-wrapper">
+              <div class="hero__img-wrapper">
                 <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
               </div>
             </section>
-            <section class="owl-carousel__item">
-              <div class="owl-carousel__text">
-                <p class="owl-carousel__para">Подключись к телевидению нового поколения сегодня и получи</p>
-                <h2 class="owl-carousel__title">3 месяца в подарок!</h2>
-                <a href="" class="owl-carousel__link-btn">Заказать</a>
+            <section class="owl-carousel__item  hero__item">
+              <div class="hero__text">
+                <p class="hero__para">Подключись к телевидению нового поколения сегодня и получи</p>
+                <h2 class="hero__title">3 месяца в подарок!</h2>
+                <a href="" class="hero__link-btn">Заказать</a>
               </div>
-              <div class="owl-carousel__img-wrapper">
+              <div class="hero__img-wrapper">
                 <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
               </div>
             </section>
@@ -56,145 +56,217 @@
         <article class="request">
           <div class="container  request__inner">
             <form id="request-form" class="request__form" name="request-form" action="" method="">
-              <div class="request__part-one">
-                <h2 class="request__title">Заявка на подключение</h2>
-                <div class="request__choice-service">
-                  <span class="request__subtitle">Выберите услугу</span>
-                  <label for="inet-service">Интернет
+
+              <div class="row  request__part-one-wrapper">
+
+                <div class="request__part-one">
+                  <h2 class="request__title">Заявка на подключение</h2>
+
+                  <div class="request__choice-service">
+                    <span class="request__subtitle">Выберите услугу</span>
                     <input id="inet-service" type="radio" name="service-type" checked>
-                  </label>
-                  <label for="tv-service">Телевидение
+                    <label class="btn  btn--services" for="inet-service"><span>Интернет</span>
+                    </label>
                     <input id="tv-service" type="radio" name="service-type">
-                  </label>
+                    <label class="btn  btn--services" for="tv-service"><span>Телевидение</span>
+                    </label>
+                  </div>
+
+                  <div class="request__select-props">
+                    <span class="request__subtitle">Подключение в</span>
+
+                    <div class="row">
+                      <div class="request__icons-wrapper">
+                        <input id="privat" type="radio" name="real-estate-type" checked>
+                        <label for="privat">Частный сектор
+                          <span>
+                            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#privat-icon"></use></svg>
+                          </span>
+                        </label>
+                        <div class="request__icons-text">Частный сектор</div>
+                      </div>
+
+                      <div class="request__icons-wrapper">
+                        <input id="apartment" type="radio" name="real-estate-type">
+                        <label for="apartment">Многоквартирный дом
+                          <span>
+                            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#multistory-icon"></use></svg>
+                          </span>
+                        </label>
+                        <div class="request__icons-text">Многоквартирные дома</div>
+                      </div>
+
+                      <div class="request__icons-wrapper">
+                        <input id="office" type="radio" name="real-estate-type">
+                        <label for="office">Для юридических лиц
+                          <span>
+                            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#office-icon"></use></svg>
+                          </span>
+                        </label>
+                        <div class="request__icons-text">Для юридических лиц</div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="request__select-rate">
+                    <span class="request__subtitle">Выберите тариф</span>
+                    <label class="field-select">
+                      <!-- <div class="field-select__name">Селект</div> -->
+                      <div class="field-select__select-wrap  request__select-wrapper">
+                        <select class="field-select__select  request__select-options" name="rate" required>
+                          <option value="rate-12">Реактивный 12</option>
+                          <option value="rate-20-plus">Реактивный 20*</option>
+                          <option value="rate-25">Реактивный 25</option>
+                          <option value="rate-40">Реактивный 40</option>
+                          <option value="rate-200-plus" selected>Реактивный 200**</option>
+                        </select>
+                      </div>
+                    </label>
+                  </div>
                 </div>
-                <div class="request__select-props">
-                  <span class="request__subtitle">Подключение в</span>
-                  <label for="privat">Частный сектор
-                    <input id="privat" type="radio" name="real-estate-type">
-                  </label>
-                  <label for="apartment">Многоквартирный дом
-                    <input id="apartment" type="radio" name="real-estate-type"checked>
-                  </label>
-                  <label for="office">Для юридических лиц
-                    <input id="office" type="radio" name="real-estate-type">
-                  </label>
-                </div>
-                <div class="request__select-rate">
-                  <span class="request__subtitle">Выберите тариф</span>
-                  <select class="request__select-options" name="rate" required>
-                    <option value="rate-12">Реактивный 12</option>
-                    <option value="rate-20-plus">Реактивный 20*</option>
-                    <option value="rate-25">Реактивный 25</option>
-                    <option value="rate-40">Реактивный 40</option>
-                    <option value="rate-200-plus" selected>Реактивный 200**</option>
-                  </select>
-                </div>
+
               </div>
-              <div class="request__part-two">
-                <h3 class="request__address">Адрес подключения</h3>
-                <div class="request__input-wrapper">
-                  <input type="text" name="street" placeholder="Улица" required>
-                  <input type="text" name="house" placeholder="Дом" required>
-                  <input type="text" name="apartment" placeholder="Кв." required>
-                  <span class="info-message"></span>
+
+              <div class="row  request__part-two-wrapper">
+
+                <div class="request__part-two">
+                  <h3 class="request__address">Адрес подключения</h3>
+                  <div class="request__input-wrapper  request__input-wrapper--multi">
+                    <input type="text" name="street" placeholder="Улица" required>
+                    <input type="text" name="house" placeholder="Дом" required>
+                    <input type="text" name="apartment" placeholder="Кв." required>
+                    <span class="info-message"></span>
+                  </div>
+                  <div class="request__input-wrapper">
+                    <input type="text" name="name" placeholder="ФИО" required>
+                    <span class="info-message"></span>
+                  </div>
+                  <div class="request__input-wrapper">
+                    <input type="tel" name="tel" placeholder="Телефон" required>
+                    <span class="info-message"></span>
+                  </div>
+                  <div class="request__input-wrapper">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <span class="info-message">Проверка</span>
+                  </div>
+                  <div class="request__input-wrapper">
+                    <button class="btn" type="submit">Отправить</button>
+                  </div>
                 </div>
-                <div class="request__input-wrapper">
-                  <input type="text" name="name" placeholder="ФИО" required>
-                  <span class="info-message"></span>
-                </div>
-                <div class="request__input-wrapper">
-                  <input type="tel" name="tel" placeholder="Телефон" required>
-                  <span class="info-message"></span>
-                </div>
-                <div class="request__input-wrapper">
-                  <input type="email" name="email" placeholder="Email" required>
-                  <span class="info-message"></span>
-                </div>
-                <div class="request__input-wrapper">
-                  <button type="submit">Отправить</button>
-                </div>
+
               </div>
+
             </form>
           </div>
         </article>
 
-        <article class="action">
-          <h2 class="action__title">Акции</h2>
-          <div id="actions-slider" class="owl-carousel  action__slider">
-            <article class="action__item">
-              <a class="action__item-link" href="">
-                <div class="action__img-wrapper">
-                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                </div>
-                <div class="action__text">
-                  <h3 class="action__subtitle">АКЦИЯ 1!</h3>
-                  <p class="action__para">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                  <a href="" class="action__readmore-link">Поподробнее</a>
-                </div>
-              </a>
-            </article>
-            <article class="action__item">
-              <a href="" class="action__item-link">
-                <div class="action__img-wrapper">
-                  <img src="img/action-img-2.jpg" alt="Акция" width="353" height="200">
-                </div>
-                <div class="action__text">
-                  <h3 class="action__subtitle">АКЦИЯ 2!</h3>
-                  <p class="action__para">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                  <a href="" class="action__readmore-link">Поподробнее</a>
-                </div>
-              </a>
-            </article>
-            <article class="action__item">
-              <a href="" class="action__item-link">
-                <div class="action__img-wrapper">
-                  <img src="img/action-img-3.jpg" alt="Акция" width="353" height="200">
-                </div>
-                <div class="action__text">
-                  <h3 class="action__subtitle">АКЦИЯ 3!</h3>
-                  <p class="action__para">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                  <a href="" class="action__readmore-link">Поподробнее</a>
-                </div>
-              </a>
-            </article>
-          </div>
-          <div class="action__btn-wrapper">
-            <a class="action__all-actions-link" href="">Все действующие акции</a>
-          </div>
-        </article>
+        <div class="container">
 
-        <article class="news">
-          <h2 class="news__title">Новости</h2>
-          <div id="news-slider" class="owl-carousel  news__slider">
-            <article class="news__item">
-              <a href="" class="news__item-link">
-                <div class="news__img-wrapper">
-                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                </div>
-                <h4 class="news__subtitle">Новость 1!</h4>
-              </a>
+          <div class="row">
+
+            <article class="action">
+              <h2 class="action__title">Акции</h2>
+              <div id="actions-slider" class="owl-carousel  action__slider">
+                <article class="action__item">
+                  <a class="action__item-link" href="">
+                    <div class="action__img-wrapper">
+                      <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                    </div>
+                    <div class="action__text">
+                      <h3 class="action__subtitle">АКЦИЯ 1!</h3>
+                      <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
+                      <a href="" class="action__readmore-link">Поподробнее
+                        <span>
+                          <svg width="13" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
+                        </span>
+                      </a>
+                    </div>
+                  </a>
+                </article>
+                <article class="action__item">
+                  <a href="" class="action__item-link">
+                    <div class="action__img-wrapper">
+                      <img src="img/action-img-2.jpg" alt="Акция" width="353" height="200">
+                    </div>
+                    <div class="action__text">
+                      <h3 class="action__subtitle">АКЦИЯ 2!</h3>
+                      <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
+                      <a href="" class="action__readmore-link">Поподробнее
+                        <span>
+                          <svg width="13" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
+                        </span>
+                      </a>
+                    </div>
+                  </a>
+                </article>
+                <article class="action__item">
+                  <a href="" class="action__item-link">
+                    <div class="action__img-wrapper">
+                      <img src="img/action-img-3.jpg" alt="Акция" width="353" height="200">
+                    </div>
+                    <div class="action__text">
+                      <h3 class="action__subtitle">АКЦИЯ 3!</h3>
+                      <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
+                      <a href="" class="action__readmore-link">Поподробнее
+                        <span>
+                          <svg width="12" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
+                        </span>
+                      </a>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <div class="action__btn-wrapper">
+                <a class="action__all-actions-link" href="">
+                  <span class="action__link-text-wrapper">Все действующие акции
+                    <span class="action__icon-wrapper">
+                    <svg width="12" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
+                  </span>
+                  </span>
+                </a>
+              </div>
             </article>
-            <article class="news__item">
-              <a href="" class="news__item-link">
-                <div class="news__img-wrapper">
-                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                </div>
-                <h4 class="news__subtitle">Новость 2!</h4>
-              </a>
-            </article>
-            <article class="news__item">
-              <a href="" class="news__item-link">
-                <div class="news__img-wrapper">
-                  <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                </div>
-                <h4 class="news__subtitle">Новость 3!</h4>
-              </a>
-            </article>
+
           </div>
-          <div class="news__btn-wrapper">
-            <a class="news__all-news-link" href="">Все новости</a>
-          </div>
-        </article>
+
+          <div class="row">
+
+            <!-- <article class="news">
+              <h2 class="news__title">Новости</h2>
+              <div id="news-slider" class="owl-carousel  news__slider">
+                <article class="news__item">
+                  <a href="" class="news__item-link">
+                    <div class="news__img-wrapper">
+                      <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                    </div>
+                    <h4 class="news__subtitle">Новость 1!</h4>
+                  </a>
+                </article>
+                <article class="news__item">
+                  <a href="" class="news__item-link">
+                    <div class="news__img-wrapper">
+                      <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                    </div>
+                    <h4 class="news__subtitle">Новость 2!</h4>
+                  </a>
+                </article>
+                <article class="news__item">
+                  <a href="" class="news__item-link">
+                    <div class="news__img-wrapper">
+                      <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
+                    </div>
+                    <h4 class="news__subtitle">Новость 3!</h4>
+                  </a>
+                </article>
+              </div>
+              <div class="news__btn-wrapper">
+                <a class="news__all-news-link" href="">Все новости</a>
+              </div>
+            </article> -->
+
+          <!-- </div> -->
+        </div>
 
         <!-- <div class="container" style="background: lightgray; min-height: 100px;">
           <div class="row" style="background: darkkhaki; min-height: 90px;">

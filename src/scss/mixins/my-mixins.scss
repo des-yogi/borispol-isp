@@ -1,0 +1,37 @@
+/* @import './src/scss/mixins/form-mixins.scss';
+@import './src/scss/mixins/grid-mixins.scss'; */
+
+@mixin text-hide {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin clearfix {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin revert-color($color, $bg-color) {
+  color: $color;
+  border-color: currentColor;
+  background: $bg-color;
+
+  &:hover,
+  &:active {
+    color: $bg-color;
+    border-color: currentColor;
+    background: $color;
+  }
+}

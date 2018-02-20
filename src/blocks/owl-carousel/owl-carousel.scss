@@ -16,17 +16,17 @@
 
   .owl-nav [class*='owl-'] {
     color: #FFF;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #D6D6D6;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.53);
     display: inline-block;
     cursor: pointer;
     border-radius: 3px;
   }
 
   .owl-nav [class*='owl-']:hover {
-    background: #869791;
+    background: rgba(255, 255, 255, 0.9);
     color: #FFF;
     text-decoration: none;
   }

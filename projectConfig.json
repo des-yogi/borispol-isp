@@ -61,7 +61,9 @@
     "main": [],
     "action": [],
     "news": [],
-    "social-links": []
+    "social-links": [],
+    "hero": [],
+    "animation": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
