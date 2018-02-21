@@ -63,7 +63,8 @@
     "news": [],
     "social-links": [],
     "hero": [],
-    "animation": []
+    "animation": [],
+    "copyrights": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",

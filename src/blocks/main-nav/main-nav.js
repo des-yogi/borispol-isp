@@ -12,7 +12,7 @@
     }
   }
 
-  // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
+  /*// Добавление/удаление модификаторов при фокусировке на ссылочном элементе
   var linkClassName = 'main-nav__link';
   var linkClassNameShowChild = 'main-nav__item--show-child';
   var findLinkClassName = new RegExp(linkClassName);
@@ -57,7 +57,7 @@
     }
 
     return elements;
-  };
+  };*/
 
   // Добавление метода .closest() (полифил, собственно)
   // (function(e){

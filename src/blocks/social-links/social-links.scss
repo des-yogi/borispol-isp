@@ -1,9 +1,66 @@
-// В этом файле должны быть стили для БЭМ-блока social-links, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока social-links, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .social-links {
 
   $block-name:                &; // #{$block-name}__element
+
+  &__link {
+    @include text-hide;
+
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    color: $white;
+    border-radius: $border-radius;
+    background: radial-gradient(56.57px at 0% 0%, #57A6F0 0%, #6DC4F8 100%);
+    transition: all 0.3s ease;
+
+    span {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    svg {
+      display: block;
+      fill: currentColor;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #57A6F0;
+    }
+
+    &--fb {
+
+      svg {
+        margin-top: auto;
+        margin-left: 15px;
+      }
+
+      &:hover {
+        background: linear-gradient(to right, #57A6F0, #57A6F0 5px, #fff 5px, #fff);
+      }
+
+    }
+
+    &--google {
+
+      svg {
+        margin: auto;
+      }
+
+      &:hover {
+        background: linear-gradient(to top, #57A6F0, #57A6F0 5px, #fff 5px, #fff);
+      }
+    }
+  }
 
 }

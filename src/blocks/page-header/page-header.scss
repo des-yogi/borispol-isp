@@ -14,17 +14,31 @@
   .logo {
     padding-top: 6px;
     padding-bottom: 6px;
+    margin-right: auto;
+    margin-left: auto;
+
     img {
       display: block;
       margin: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
   &__nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     border-left: 2px solid lightgray;
     border-right: 2px solid lightgray;
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+      min-height: 80px;
+    }
   }
 }
