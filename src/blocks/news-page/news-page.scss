@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока news-page, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.news-page {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    color: $color-warning;
+  }
+
+  &__item-link {
+    height: 100%;
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+
+}

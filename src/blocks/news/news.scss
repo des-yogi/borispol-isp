@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока news, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока news, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,55 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__item {
+    // overflow: hidden;
+    height: 100%;
+  }
+
+  &__slider {
+    display: flex;
+  }
+
+  &__title {
+    color: $color-warning;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 20px;
+  }
+
+  &__para {
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-top: auto;
+    text-align: left;
+    color: $title-color;
+  }
+
+  &__item-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__all-actions-link {
+    background: radial-gradient(262.43px at 0% 0%, #F4C967 0%, #EDA757 100%);
+
+    &:hover {
+      color: $color-warning;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 250px;
+    }
+  }
 }

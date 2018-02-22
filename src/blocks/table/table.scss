@@ -15,6 +15,12 @@ $line-height:                 1.375em !default;
 $field-padding-vertical:      0.3em !default;
 $field-padding-horizontal:    0.7em !default;
 
+.table-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
 .table {
 
   $block-name:                &; // #{$block-name}__element
@@ -26,21 +32,32 @@ $field-padding-horizontal:    0.7em !default;
 
   caption {
     padding-top: 0.4em;
-    text-align: right;
-    caption-side: bottom;
+    margin-bottom: 1em;
+    text-align: left;
+    caption-side: top;
     font-size: $font-size--small;
     line-height: 1em;
     color: $text-color--muted;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
   }
 
   td,
   th {
     padding: $field-padding-vertical $field-padding-horizontal;
     vertical-align: top;
+    font-size: 14px;
+    line-height: 1.35;
     border-bottom: 1px solid $border-color;
 
     &:not(:first-child) {
       border-left: 1px solid $border-color;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
     }
   }
 
@@ -53,4 +70,8 @@ $field-padding-horizontal:    0.7em !default;
   &__body {}
 
   &__footer {}
+}
+
+* + table {
+  margin-top: 30px;
 }

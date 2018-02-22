@@ -33,8 +33,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-left: 2px solid lightgray;
-    border-right: 2px solid lightgray;
+    // border-left: 2px solid lightgray;
+    // border-right: 2px solid lightgray;
+
+    @media (min-width: $screen-md) {
+      border-bottom: 1px solid $gray-lightest;
+    }
 
     @media (min-width: $screen-xl) {
       flex-wrap: nowrap;

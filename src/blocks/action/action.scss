@@ -13,33 +13,12 @@
     margin-bottom: 15px !important;
   }
 
-  @include col (
-    $screen:  xs,
-    $column:  $grid-columns,
-    $columns: $grid-columns,
-    $gutter:  $grid-gutter-width
-  )
-
-  @include col (
-    $screen:  md,
-    $column:  $grid-columns,
-    $columns: $grid-columns,
-    $gutter:  $grid-gutter-width
-  )
-
-  @include col (
-    $screen:  lg,
-    $column:  $grid-columns,
-    $columns: $grid-columns,
-    $gutter:  $grid-gutter-width
-  )
-
-  @include col (
-    $screen:  xl,
-    $column:  $grid-columns,
-    $columns: $grid-columns,
-    $gutter:  $grid-gutter-width
-  )
+  @media (min-width: $screen-xl) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
@@ -49,28 +28,86 @@
     text-transform: uppercase;
     text-align: center;
     color: $color-turquoise;
+
+    @media (min-width: $screen-xl) {
+      text-align: left;
+      padding-left: 100px;
+    }
   }
 
   &__slider {
+    display: flex;
 
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col-offset (
+      $screen: md,
+      $column: 1,
+      $columns: $grid-columns
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  10,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  lg,
+      $column:  10,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col-offset (
+      $screen: xl,
+      $column: 0,
+      $columns: $grid-columns
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
   }
 
   .owl-carousel .owl-stage-outer {
     // overflow: visible;
   }
 
+  .owl-stage {
+    display: flex;
+    align-items: stretch;
+  }
+
   .owl-item {
+    display: flex;
+
     &:hover {
       // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     }
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     border: 2px solid #EBEBEB;
   }
 
   &__item-link {
-    display: block;
+    //display: block;
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
     text-decoration: none;
 
     &:hover {
@@ -79,10 +116,24 @@
   }
 
   &__img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-turquoise;
 
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: inherit;
@@ -98,12 +149,16 @@
   &__para {
     text-align: left;
     color: $text-color;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
   }
 
   &__readmore-link {
     display: inline-block;
     vertical-align: top;
-    margin-top: 40px;
+    margin-top: auto;
     margin-bottom: 15px;
     font-family: $font-family--headings;
     font-size: 18px;
@@ -119,6 +174,12 @@
 
   &__btn-wrapper {
     text-align: center;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 50px;
+      margin-right: 20px;
+      text-align: right;
+    }
   }
 
   &__all-actions-link {
@@ -160,6 +221,7 @@
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
 
     &:hover {
       background: $white;
@@ -169,5 +231,4 @@
   &__icon-wrapper {
     margin-left: 10px;
   }
-
 }

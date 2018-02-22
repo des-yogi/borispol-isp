@@ -369,9 +369,14 @@ a {
   font-size: inherit;
   font-weight: inherit;
   text-decoration: none;
+  // color: $color-main;
 
   &:hover {
     text-decoration: underline;
     text-decoration-skip: ink;
+  }
+
+  &:visited {
+    // color: $color-violet;
   }
 }
