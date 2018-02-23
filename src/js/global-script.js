@@ -70,6 +70,22 @@ $(document).ready(function(){
     }
   });
 
+  $(".faq__accordion").accordionjs({
+
+    // The section open on first init.
+    activeIndex : false,
+
+    // Closeable section.
+    closeAble: true,
+
+    // Close other sections.
+    closeOther: true,
+
+    // the speed of slide animation.
+    slideSpeed: 200
+
+  });
+
 });
 
 (function(){

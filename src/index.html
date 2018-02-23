@@ -55,7 +55,7 @@
 
         <article class="request">
           <div class="container  request__inner">
-            <form id="request-form" class="request__form" name="request-form" action="" method="">
+            <form id="request-form" class="request__form" name="request-form" action="/" method="post">
 
               <div class="row-full  request__part-one-wrapper">
 
@@ -113,7 +113,7 @@
                     <span class="request__subtitle">Выберите тариф</span>
                     <label class="field-select">
                       <div class="field-select__select-wrap  request__select-wrapper">
-                        <select class="field-select__select  request__select-options" name="rate" required>
+                        <select class="field-select__select  request__select-options" name="rate">
                           <option value="rate-12">Реактивный 12</option>
                           <option value="rate-20-plus">Реактивный 20*</option>
                           <option value="rate-25">Реактивный 25</option>
@@ -169,7 +169,7 @@
             <div id="actions-slider" class="owl-carousel  action__slider">
 
               <article class="action__item">
-                <a class="action__item-link" href="">
+                <div class="action__item-link">
                   <div class="action__img-wrapper">
                     <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
                   </div>
@@ -183,11 +183,11 @@
                       </span>
                     </a>
                   </div>
-                </a>
+                </div>
               </article>
 
               <article class="action__item">
-                <a href="" class="action__item-link">
+                <div class="action__item-link">
                   <div class="action__img-wrapper">
                     <img src="img/action-img-2.jpg" alt="Акция" width="353" height="200">
                   </div>
@@ -200,11 +200,11 @@
                       </span>
                     </a>
                   </div>
-                </a>
+                </div>
               </article>
 
               <article class="action__item">
-                <a href="" class="action__item-link">
+                <div class="action__item-link">
                   <div class="action__img-wrapper">
                     <img src="img/action-img-3.jpg" alt="Акция" width="353" height="200">
                   </div>
@@ -217,7 +217,7 @@
                       </span>
                     </a>
                   </div>
-                </a>
+                </div>
               </article>
 
             </div>
@@ -306,6 +306,8 @@
             </div>
 
           </article>
+
+        </div>
 
       </main>
 

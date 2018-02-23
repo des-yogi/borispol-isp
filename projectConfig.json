@@ -67,7 +67,12 @@
     "copyrights": [],
     "actions-page": [],
     "news-page": [],
-    "content": []
+    "content": [],
+    "contacts": [],
+    "accordion": [],
+    "coverage": [],
+    "map": [],
+    "rates": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
