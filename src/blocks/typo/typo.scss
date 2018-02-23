@@ -5,27 +5,27 @@ $gray:                        hsl(0, 0%, 50%) !default;
 $gray-lighter:                hsl(0, 0%, 80%) !default;
 $gray-lightest:               hsl(0, 0%, 90%) !default;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'PT Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
-$font-family--headings:       $font-family !default;
+$font-family:                 -apple-system, BlinkMacSystemFont, 'PT Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family--headings:       'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
 $font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace !default;
 
 $font-size:                   16px !default;
-$font-size--h1:               2.25em !default;
-$font-size--h2:               1.875em !default;
-$font-size--h3:               1.5em !default;
-$font-size--h4:               1.25em !default;
+$font-size--h1:               28px !default;
+$font-size--h2:               22px !default;
+$font-size--h3:               22px !default;
+$font-size--h4:               18px !default;
 $font-size--h5:               1em !default;
 $font-size--h6:               1em !default;
 $font-size--small:            0.75em !default;
 
-$line-height:                 1.375em !default;
+$line-height:                 1.35 !default;
 
 $text-color:                  hsl(0, 0%, 10%) !default;
 $border-color:                hsl(0, 0%, 60%) !default;
 
 $screen-sm:                   480px !default;
 
-$border-radius:               3px !default;
+$border-radius:               5px !default;
 
 /* roboto-regular - latin_cyrillic-ext */
 @font-face {
@@ -114,7 +114,7 @@ h4,
 h5,
 h6 {
   font-family: $font-family--headings;
-  font-weight: 700;
+  font-weight: 500;
   line-height: $line-height;
   color: currentColor;
 }
@@ -178,8 +178,46 @@ blockquote,
 pre,
 address,
 figure {
-  margin-top: ($line-height / 2);
+  margin-top: 0;
   margin-bottom: ($line-height / 2);
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 400;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 18px;
+  }
+}
+
+* + p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+address,
+figure {
+  margin-top: ($line-height / 2);
+}
+
+p.emphasized {
+  font-size: 16px;
+
+  @media (min-width: $screen-md) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 20px;
+  }
 }
 
 address {
@@ -200,7 +238,44 @@ ul ol {
 }
 
 li {
+  margin-bottom: ($line-height / 2);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   line-height: inherit;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+li.marked {
+  position: relative;
+  padding-left: 20px;
+  list-style-type: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-4px);
+    left: 0;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-main;
+
+    @media (min-width: $screen-md) {
+      width: 8px;
+      height: 8px;
+      transform: translateY(-4px);
+    }
+
+    @media (min-width: $screen-xl) {
+      transform: translateY(-5px);
+    }
+  }
 }
 
 dt {
@@ -287,4 +362,21 @@ pre {
   width: 100%;
   overflow-x: auto;
   tab-size: 2;
+}
+
+a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  // color: $color-main;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+
+  &:visited {
+    // color: $color-violet;
+  }
 }

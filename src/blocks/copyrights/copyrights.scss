@@ -1,0 +1,53 @@
+// В этом файле должны быть стили для БЭМ-блока copyrights, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.copyrights {
+  background: radial-gradient(321.91px at 0% 0%, #57A6F0 0%, #6DC4F8 100%);
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    min-height: 35px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__holder {
+    display: block;
+    font-size: 14px;
+    color: $white;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__developer {
+    display: inline-block;
+    vertical-align: top;
+    @include text-hide;
+    padding-top: 5px;
+
+    img {
+      display: block;
+      width: 64px;
+      height: 23px;
+    }
+
+    @media (min-width: $screen-sm) {
+      padding-top: 0;
+    }
+  }
+
+}

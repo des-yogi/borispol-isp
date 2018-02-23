@@ -1,0 +1,185 @@
+// В этом файле должны быть стили для БЭМ-блока hero, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.hero {
+  margin-bottom: 30px;
+  background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__slider {
+    padding-top: 15px;
+    padding-bottom: 7px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 80px;
+      // padding-bottom: 80px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-top: 35px;
+    }
+  }
+
+  &__item {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @media (min-width: $screen-md) {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 50px;
+      }
+
+      @media (min-width: $screen-lg) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-md) {
+      order: 1;
+    }
+  }
+
+  &__para {
+    padding: 15px;
+    font-family: $font-family--headings;
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    background-color: $color-turquoise;
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: $white;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link-btn {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-turquoise;
+    border-left: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: $color-turquoise;
+      border-color: $color-turquoise;
+    }
+  }
+
+  &__img-wrapper {
+    // max-width: 204px;
+    // max-height: 150px;
+
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      width: 220px;
+      max-height: 180px;
+      object-fit: contain;
+      object-position: left center;
+
+      @media (min-width: $screen-md) {
+        width: 287px;
+        max-height: 230px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 406px;
+        max-height: 300px;
+      }
+    }
+  }
+
+  .owl-dot span {
+    background: rgba(255, 255, 255, 0.53);
+  }
+
+  .owl-dot.active span {
+    background: $white;
+  }
+
+  .owl-dots {
+
+    @media (min-width: $screen-md) {
+      margin-top: 70px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 30px;
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    width: calc(100% + 40px * 2);
+    top: 50%;
+    transform: translateY(-27px);
+    left: -40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+
+    & > div {
+      position: relative;
+      width: 35px;
+      height: 55px;
+      background-color: $white;
+
+      &::before {
+        position: absolute;
+        top: 11.5px;
+        left: 50%;
+        transform: translate(-18px, 6px) rotate(45deg);
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-top: 3px solid rgba(0, 0, 150, 0.35);
+        border-right: 3px solid rgba(0, 0, 150, 0.35);
+      }
+    }
+
+    & .owl-prev {
+        &::before {
+          transform: translate(-6px, 6px) rotate(-135deg);
+        }
+    }
+  }
+
+}

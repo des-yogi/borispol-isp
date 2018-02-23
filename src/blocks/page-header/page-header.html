@@ -1,11 +1,110 @@
 <!--DEV
-
 Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
-<header class="page-header" role="banner">
-  page-header
+<header id="header" class="page-header">
+  <section class="container  page-header__nav">
+    <div id="main-nav-toggler" class="main-nav__toggler  burger">
+      <span></span>
+    </div>
+    <div class="logo">
+      <a href="/" class="logo__link">
+        <img src="img/borispol-logo.svg" width="110" height="50" alt="Борисполь ISP">
+      </a>
+    </div>
+    <nav id="main-nav" class="main-nav" role="navigation">
+      <ul class="main-nav__list">
+        <li class="main-nav__item  main-nav__item">
+          <a href="actions.html" class="main-nav__link">Акции</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="rates.html" class="main-nav__link">Тарифы</a>
+        </li>
+        <li class="main-nav__item  active">
+          <a class="main-nav__link">Абоненту</a>
+          <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
+            <ul class="main-nav__list  main-nav__list--lvl-2">
+              <li class="main-nav__item  main-nav__item--lvl-2">
+                <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                  Мой кабинет
+                </a>
+              </li>
+              <li class="main-nav__item  main-nav__item--lvl-2">
+                <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                  Оплата
+                </a>
+              </li>
+              <li class="main-nav__item  main-nav__item--lvl-2">
+                <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                  Правила
+                </a>
+              </li>
+              <li class="main-nav__item  main-nav__item--lvl-2">
+                <a href="" class="main-nav__link  main-nav__link--lvl-2">
+                  Проверка скорости
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="main-nav__item">
+          <a href="coverage.html" class="main-nav__link">Покрытие</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contacts.html" class="main-nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section class="container  user-nav" role="navigation">
+    <div class="user-nav__phones  user-nav__phones">
+      <ul class="user-nav__phone-list  user-nav__phone-list--sale">
+        <li class="user-nav__phone-item">
+          <span class="user-nav__text  user-nav__text--sale">Отдел <br>продаж</span>
+        </li>
+        <li class="user-nav__phone-item">
+          <a class="user-nav__tel-link" href="tel:+380459567141">(04595) 6-71-41</a>
+        </li>
+        <li class="user-nav__phone-item">
+          <a class="user-nav__tel-link" href="tel:+380935061818">(093) 506-18-18</a>
+        </li>
+        <li class="user-nav__phone-item">
+          <a class="user-nav__tel-link" href="tel:+380952227141">(095) 222-71-41</a>
+        </li>
+        <li class="user-nav__phone-item">
+          <a class="user-nav__tel-link" href="tel:+380961417141">(096) 141-71-41</a>
+        </li>
+      </ul>
+      <ul class="user-nav__phone-list  user-nav__phone-list--support">
+        <li class="user-nav__phone-item">
+          <span class="user-nav__text  user-nav__text--support">Круглосуточная <br>техподдержка</span>
+        </li>
+        <li class="user-nav__phone-item">
+          <a class="user-nav__tel-link" href="tel:+380503578534">(050) 357-85-34</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="user-nav__utils">
+      <ul class="user-nav__utils-list">
+        <li class="user-nav__utils-item">
+          <a href="" class="user-nav__utils-link">
+            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-icon"></use></svg>
+          </a>
+        </li>
+        <li class="user-nav__utils-item">
+          <a href="" class="user-nav__utils-link">
+            <svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#faq-icon"></use></svg>
+          </a>
+        </li>
+        <li class="user-nav__utils-item">
+          <a href="" class="user-nav__utils-link  user-nav__utils-link--lang">
+            RU
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 </header>

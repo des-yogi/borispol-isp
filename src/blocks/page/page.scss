@@ -95,6 +95,7 @@ img {
 }
 
 .container {
+
   @include container (
     $xs-grid-gutter: $grid-gutter-width,
     $sm-grid-gutter: $grid-gutter-width,
@@ -102,6 +103,8 @@ img {
     $lg-grid-gutter: 50px,
     $xl-grid-gutter: 80px
   )
+
+  // box-shadow: -3px 0px 2px rgba(0, 0, 0, 0.29), 3px 0px 2px rgba(0, 0, 0, 0.29);
 }
 
 .row {
@@ -111,6 +114,16 @@ img {
     $md-grid-gutter: $grid-gutter-width,
     $lg-grid-gutter: $grid-gutter-width,
     $xl-grid-gutter: $grid-gutter-width
+  )
+}
+
+.row-full {
+  @include row (
+    $xs-grid-gutter: $grid-gutter-width,
+    $sm-grid-gutter: $grid-gutter-width,
+    $md-grid-gutter: 50px,
+    $lg-grid-gutter: 50px,
+    $xl-grid-gutter: 80px
   )
 }
 
@@ -132,4 +145,94 @@ img {
     $columns: $grid-columns,
     $gutter:  $grid-gutter-width
   )
+}
+
+// input defaults:
+
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=email] {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  font-size: 1em;
+  font-family: inherit;
+  color: $text-color;
+  background-color: $white;
+  border: 3px solid transparent;
+  border-radius: $border-radius;
+  box-sizing: inherit;
+  appearance: textfield;
+
+  &:focus {
+    @include field-focus;
+  }
+
+  &[disabled],
+  &[readonly] {
+    cursor: default;
+    background-color: $gray-lighter;
+  }
+
+  &[type='search']::-webkit-search-cancel-button,
+  &[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none; // stylelint-disable-line  property-no-vendor-prefix
+  }
+
+  &[type='number']::-webkit-inner-spin-button,
+  &[type='number']::-webkit-outer-spin-button {
+    // height: auto;
+  }
+
+  &[type='color'] {
+    // max-width: 100px;
+    padding: 0;
+  }
+
+  &::placeholder {
+    color: $text-color--muted;
+    opacity: 1;
+  }
+}
+
+.info-message {
+  display: block;
+  width: auto;
+  min-height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: inherit;
+  font-size: 0.85em;
+  color: inherit;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
