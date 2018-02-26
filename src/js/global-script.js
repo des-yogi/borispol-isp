@@ -70,6 +70,22 @@ $(document).ready(function(){
     }
   });
 
+  $("#rates-slider").owlCarousel({
+    items: 1,
+    loop: false,
+    nav: false,
+    dots: false,
+    autoHeight: true,
+    URLhashListener: true,
+    autoplayHoverPause: true,
+    startPosition: 'URLHash'
+    // autoplay: true,
+    // autoplayTimeout: 3000,
+    // autoplayHoverPause: true,
+    // nav: false
+
+  });
+
   $(".faq__accordion").accordionjs({
 
     // The section open on first init.
@@ -149,6 +165,28 @@ $(document).ready(function(){
 
 
     // debugger
+
+}());
+
+(function(){
+  // modal, выбор тарифа и отправка формы
+
+  var ratesSlider = document.querySelector('#rates-slider');
+  var btnArr = ratesSlider.querySelectorAll('button');
+  var modalConnect = document.querySelector('#connect');
+  var hiddenField = modalConnect.querySelector('input[type=hidden]');
+  var currentChoise;
+
+  ratesSlider.addEventListener('click', function (e) {
+    currentChoise = e.target.value;
+
+    if (!hiddenField) {
+      return;
+    } else {
+        hiddenField.value = currentChoise;
+    }
+
+  });
 
 }());
 

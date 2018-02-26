@@ -1,9 +1,312 @@
-// В этом файле должны быть стили для БЭМ-блока rates, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока rates, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .rates {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $light-bg-color;
+
+  @media (min-width: $screen-md) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 35px;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row (
+      $xs-grid-gutter:  $grid-gutter-width,
+      $sm-grid-gutter:  $grid-gutter-width,
+      $md-grid-gutter:  50px,
+      $lg-grid-gutter:  50px,
+      $xl-grid-gutter:  80px
+    )
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $color-violet;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: $text-color;
+  }
+
+  &__controls {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $white;
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  3,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      border-top: 2px solid $gray-lightest;
+      border-bottom: 2px solid $gray-lightest;
+    }
+  }
+
+  &__list {
+    margin-top: 0;
+    padding-left: 25px;
+    list-style-type: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  &__item {
+
+    &.active {
+      a {
+        text-decoration: inherit;
+        color: $color-violet;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -25px;
+          content: "";
+          display: block;
+          width: 4px;
+          height: 100%;
+          background-color: currentColor;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    font-family: $font-family--headings;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $title-color;
+
+    &:hover,
+    &:focus,
+    &.active {
+      text-decoration: inherit;
+      color: $color-violet;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -25px;
+        content: "";
+        display: block;
+        width: 4px;
+        height: 100%;
+        background-color: currentColor;
+      }
+    }
+  }
+
+  &__type-tables {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: radial-gradient(500.62px at 0% 0%, #A64961 0%, #A64961 0.01%, #C8687A 49.17%, #E7848F 100%);
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  9,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+
+    @media (min-width: $screen-md) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    // border: 3px solid $white;
+
+    button {
+      width: 100%;
+      height: 100%;
+      padding-top: 10px;
+      padding-bottom: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: $font-family--headings;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+      color: $white;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $text-color;
+        background: $white;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      // width: calc(100% - 90px);
+      border: 3px solid $white;
+      border-radius: $border-radius;
+    }
+  }
+
+  .rates__table-row {
+    border: 3px solid $white;
+    border-radius: $border-radius;
+  }
+
+  .rates__head {
+    background: $white;
+
+    th {
+      @media (min-width: $screen-md) {
+        padding: 10px;
+        color: $text-color;
+        // background: $white;
+      }
+
+      @media (min-width: $screen-xl) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .rates__cell {
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+
+    &--white {
+      padding-bottom: 7px;
+      font-size: 18px;
+      font-weight: 500;
+      // text-transform: uppercase;
+      color: $white;
+      border-bottom: 3px solid $white;
+
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        // height: 35px;
+        padding-top: 5px;
+        padding-bottom: 7px;
+        margin-bottom: 7px;
+        text-transform: none;
+        color: $title-color;
+        background-color: $white;
+      }
+
+      @media (min-width: $screen-md) {
+        border-bottom: none;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 9px;
+      padding-bottom: 10px;
+    }
+  }
+
+
+  &__caption {
+    margin-bottom: 25px;
+    font-family: $font-family--headings;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center !important;
+    color: $white;
+  }
+
+  &__info {
+    padding-top: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+
+    p {
+      font-size: inherit;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
 
 }

@@ -1,0 +1,116 @@
+// В этом файле должны быть стили для БЭМ-блока connect-request, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.connect-request {
+
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__content {
+    width: 320px;
+    height: auto;
+    padding: 25px 15px;
+    background: radial-gradient(477.20px at 0% 0%, #A64961 0%, #A64961 0.01%, #C8687A 49.17%, #E7848F 100%);
+  }
+
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+
+    input[name=street] {
+    }
+
+    input[name=house] {
+      width: 50%;
+      margin-right: 20px;
+    }
+
+    input[name=apartment] {
+      width: calc(50% - 20px);
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    #agreement {
+      display: none;
+    }
+  }
+
+  &__agreement {
+    position: relative;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: $white;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+    }
+
+    &:before {
+      top: 3px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: $white;
+      border-radius: $border-radius;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      &:after {
+        top: 4px;
+        left: 0;
+        content: "+";
+        width: 24px;
+        height: 24px;
+        font-size: 45px;
+        color: $color-violet;
+        transform: rotate(45deg);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  #agreement:checked + label[for=agreement] {
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 4px;
+        left: 0;
+        content: "+";
+        width: 24px;
+        height: 24px;
+        font-size: 45px;
+        color: $color-violet;
+        transform: rotate(45deg);
+        opacity: 0.7;
+      }
+    }
+}

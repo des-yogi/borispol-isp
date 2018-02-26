@@ -7,23 +7,46 @@
 (Нужно убрать пробел между символами @)
 Подробнее: https://www.npmjs.com/package/gulp-file-include
 
+-->
 
-
-<div id="modal-demo" class="modal" tabindex="-1" role="dialog">
+<div id="connect" class="modal  connect-request" tabindex="-1" role="dialog">
   <div class="modal__dialog" role="document">
-    <div class="modal__content">
+    <div class="modal__content  connect-request__content">
       <div class="modal__header">
         <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
-        <h4 class="modal__title">Modal</h4>
+        <h4 class="modal__title  connect-request__title">Адрес подключения</h4>
       </div>
       <div class="modal__body">
-        <p>Далеко-далеко за словесными горами...</p>
-      </div>
-      <div class="modal__footer">
-        <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+
+        <form action="">
+          <div class="connect-request__input-wrapper">
+            <input type="text" name="street" placeholder="Улица" required>
+            <span class="info-message"></span>
+            <input type="text" name="house" placeholder="Дом" required>
+            <input type="text" name="apartment" placeholder="Кв." required>
+            <span class="info-message"></span>
+          </div>
+          <div class="connect-request__input-wrapper">
+            <input type="text" name="name" placeholder="ФИО" required>
+            <span class="info-message"></span>
+          </div>
+          <div class="connect-request__input-wrapper">
+            <input type="tel" name="tel" placeholder="Телефон" required>
+            <span class="info-message"></span>
+          </div>
+          <div class="connect-request__input-wrapper">
+            <input type="email" name="email" placeholder="Email" required>
+            <span class="info-message">Проверка</span>
+          </div>
+          <div class="connect-request__input-wrapper">
+            <button class="btn  btn--request" type="submit">Отправить</button>
+            <input id="agreement" type="checkbox" name="agreement" checked>
+            <label class="connect-request__agreement" for="agreement">Я соглашаюсь с правилами</label>
+          </div>
+          <input type="hidden" name="rate" value="null">
+        </form>
+
       </div>
     </div>
   </div>
 </div>
-
--->

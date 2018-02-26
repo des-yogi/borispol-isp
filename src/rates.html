@@ -18,49 +18,263 @@
 
       <main role="main">
 
-        <div class="container">
+        <article class="container rates">
 
-          <table class="table-responsive">
-            <thead>
-              <tr>
-                <th>Тарифный план</th>
-                <th>Скорость, Мб/c</th>
-                <th>Абонплата</th>
-                <th>&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Тарифный план">UNLIM 155</td>
-                <td data-label="Скорость, Мб/c">до 25</td>
-                <td data-label="Абонплата">155</td>
-                <td data-label="&nbsp;">
-                  <form action="" method="get">
-                    <input type="radio" name="unlim-155" value="unlim-155" checked hidden>
-                    <button type="submit">Подключить</button>
-                  </form>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Тарифный план">UNLIM 205</td>
-                <td data-label="Скорость, Мб/c">до 50</td>
-                <td data-label="Абонплата">205</td>
-                <td data-label="&nbsp;">
-                  <button type="submit" name="unlim-205">Подключить</button>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Тарифный план">UNLIM 250</td>
-                <td data-label="Скорость, Мб/c">до 100</td>
-                <td data-label="Абонплата">250</td>
-                <td data-label="&nbsp;">
-                  <button type="submit" name="unlim-250">Подключить</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <h1 class="rates__title">Тарифы</h1>
 
-        </div>
+          <div class="rates__row">
+
+            <div class="rates__controls" role="navigation">
+              <h2 class="rates__subtitle">Типы тарифов:</h2>
+              <ul class="rates__list">
+                <li class="rates__item">
+                  <a class="rates__item-link" href="#privat">Частный сектор</a>
+                </li>
+                <li class="rates__item">
+                  <a class="rates__item-link" href="#multistory">Многоквартирные дома</a>
+                </li>
+                <li class="rates__item">
+                  <a class="rates__item-link" href="#office">Для юридических лиц</a>
+                </li>
+                <li class="rates__item">
+                  <a class="rates__item-link" href="#add-services">Дополнительные услуги</a>
+                </li>
+                <li class="rates__item">
+                  <a class="rates__item-link" href="#tv">Телевидение</a>
+                </li>
+              </ul>
+            </div>
+
+            <article class="rates__type-tables">
+
+              <div id="rates-slider" class="owl-carousel  rates__slider">
+
+                <div class="rates__privat" data-hash="privat">
+                  <table class="table-responsive rates__table">
+                    <caption class="rates__caption">Для частного сектора</caption>
+                    <thead class="rates__head">
+                      <tr>
+                        <th>Тарифный план</th>
+                        <th>Скорость, Мб/c</th>
+                        <th>Абонплата</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 155</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 25</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">155</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <!-- <form action="" method="get"> -->
+                            <!-- <input type="hidden" name="unlim-155" value="unlim-155"> -->
+                            <button type="button" data-toggle="modal" data-target="#connect" value="unlim-155">Подключить</button>
+                          <!-- </form> -->
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 205</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 50</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">205</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="button" data-toggle="modal" data-target="#connect" value="unlim-205">Подключить</button>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 250</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 100</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">250</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="button" data-toggle="modal" data-target="#connect" value="unlim-250">Подключить</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="rates__privat" data-hash="multistory">
+                  <table class="table-responsive rates__table">
+                    <caption class="rates__caption">Многоквартирные дома</caption>
+                    <thead class="rates__head">
+                      <tr>
+                        <th>Тарифный план</th>
+                        <th>Скорость, Мб/c</th>
+                        <th>Абонплата</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 155</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 25</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">155</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <form action="" method="get">
+                            <input type="hidden" name="unlim-155" value="unlim-155">
+                            <button type="submit">Подключить</button>
+                          </form>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 205</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 50</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">205</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-205">Подключить</button>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 250</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 100</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">250</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-250">Подключить</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="rates__privat" data-hash="office">
+                  <table class="table-responsive rates__table">
+                    <caption class="rates__caption">Для юридических лиц</caption>
+                    <thead class="rates__head">
+                      <tr>
+                        <th>Тарифный план</th>
+                        <th>Скорость, Мб/c</th>
+                        <th>Абонплата</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 155</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 25</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">155</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <form action="" method="get">
+                            <input type="hidden" name="unlim-155" value="unlim-155">
+                            <button type="submit">Подключить</button>
+                          </form>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 205</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 50</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">205</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-205">Подключить</button>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 250</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 100</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">250</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-250">Подключить</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="rates__privat" data-hash="add-services">
+                  <table class="table-responsive rates__table">
+                    <caption class="rates__caption">Дополнительные услуги</caption>
+                    <thead class="rates__head">
+                      <tr>
+                        <th>Тарифный план</th>
+                        <th>Скорость, Мб/c</th>
+                        <th>Абонплата</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 155</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 25</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">155</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <form action="" method="get">
+                            <input type="hidden" name="unlim-155" value="unlim-155">
+                            <button type="submit">Подключить</button>
+                          </form>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 205</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 50</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">205</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-205">Подключить</button>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 250</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 100</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">250</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-250">Подключить</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="rates__privat" data-hash="tv">
+                  <table class="table-responsive rates__table">
+                    <caption class="rates__caption">Телевидение</caption>
+                    <thead class="rates__head">
+                      <tr>
+                        <th>Тарифный план</th>
+                        <th>Скорость, Мб/c</th>
+                        <th>Абонплата</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 155</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 25</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">155</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <form action="" method="get">
+                            <input type="hidden" name="unlim-155" value="unlim-155">
+                            <button type="submit">Подключить</button>
+                          </form>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 205</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 50</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">205</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-205">Подключить</button>
+                        </td>
+                      </tr>
+                      <tr class="rates__table-row">
+                        <td class="rates__cell  rates__cell--white" data-label="Тарифный план">UNLIM 250</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Скорость, Мб/c">до 100</td>
+                        <td class="rates__cell  rates__cell--white" data-label="Абонплата">250</td>
+                        <td class="rates__cell  rates__cell--btn-wrapper">
+                          <button type="submit" name="unlim-250">Подключить</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+
+              <div class="rates__info">
+                <p>Все тарифы указанны, без ограничения трафика приема/передачи.</p>
+              </div>
+
+            </article>
+
+          </div>
+
+        </article>
 
       </main>
 
@@ -71,6 +285,8 @@
     </div> <!-- page__content end -->
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 
