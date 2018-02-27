@@ -7,11 +7,31 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__dialog {
+
+    @media (min-width: $screen-md) {
+      width: 400px;
+      height: auto;
+      margin: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 500px;
+    }
+  }
+
   &__content {
-    width: 320px;
+    // width: 320px;
     height: auto;
     padding: 25px 15px;
     background: radial-gradient(477.20px at 0% 0%, #A64961 0%, #A64961 0.01%, #C8687A 49.17%, #E7848F 100%);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      height: auto;
+      min-height: auto;
+      padding: 30px 25px;
+    }
   }
 
   &__title {
@@ -98,19 +118,19 @@
   }
 
   #agreement:checked + label[for=agreement] {
-      &:after {
-        position: absolute;
-        content: "";
-        display: block;
-        top: 4px;
-        left: 0;
-        content: "+";
-        width: 24px;
-        height: 24px;
-        font-size: 45px;
-        color: $color-violet;
-        transform: rotate(45deg);
-        opacity: 0.7;
-      }
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 4px;
+      left: 0;
+      content: "+";
+      width: 24px;
+      height: 24px;
+      font-size: 45px;
+      color: $color-violet;
+      transform: rotate(45deg);
+      opacity: 0.7;
     }
+  }
 }

@@ -190,6 +190,7 @@ figure {
   font-family: $font-family;
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.35em;
 
   &:last-child {
     margin-bottom: 0;
@@ -233,7 +234,7 @@ address {
 
 ul,
 ol {
-  padding-left: 1.2em;
+  padding-left: 1.5em;
 }
 
 ol ol,

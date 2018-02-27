@@ -172,21 +172,26 @@ $(document).ready(function(){
   // modal, выбор тарифа и отправка формы
 
   var ratesSlider = document.querySelector('#rates-slider');
-  var btnArr = ratesSlider.querySelectorAll('button');
   var modalConnect = document.querySelector('#connect');
-  var hiddenField = modalConnect.querySelector('input[type=hidden]');
   var currentChoise;
 
-  ratesSlider.addEventListener('click', function (e) {
-    currentChoise = e.target.value;
+  if (ratesSlider) {
 
-    if (!hiddenField) {
-      return;
-    } else {
-        hiddenField.value = currentChoise;
-    }
+    var hiddenField = modalConnect.querySelector('input[type=hidden]');
+    var btnArr = ratesSlider.querySelectorAll('button');
 
-  });
+    ratesSlider.addEventListener('click', function (e) {
+      currentChoise = e.target.value;
+
+      if (!hiddenField) {
+        return;
+      } else {
+          hiddenField.value = currentChoise;
+      }
+    });
+
+  }
+
 
 }());
 

@@ -80,6 +80,7 @@
       padding-bottom: 60px;
       border-top: 2px solid $gray-lightest;
       border-bottom: 2px solid $gray-lightest;
+      border-left: 2px solid $gray-lightest;
     }
   }
 
@@ -97,6 +98,7 @@
   }
 
   &__item {
+    margin-bottom: 15px;
 
     &.active {
       a {

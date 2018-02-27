@@ -19,49 +19,58 @@
       <main role="main">
 
         <div class="container  contacts">
+
           <h1 class="contacts__title">Контакты</h1>
 
-          <div class="row">
-            <article class="contacts__info">
-              <section class="contacts__common-tel">
-                <h2 class="contacts__subtitle">Общие и финансовые вопросы:</h2>
-                <ul class="contacts__list">
-                    <li class="contacts__item">
-                      <a class="contacts__tel-link" href="tel:+380459567141">(04595) 6-71-41</a>
-                    </li>
-                    <li class="contacts__item">
-                      <a class="contacts__tel-link" href="tel:+380952227141">(095) 222-71-41</a>
-                    </li>
-                    <li class="contacts__item">
-                      <a class="contacts__tel-link" href="tel:+380935061818">(093) 506-18-18</a>
-                    </li>
-                    <li class="contacts__item">
-                      <a class="contacts__tel-link" href="tel:+380961417141">(096) 141-71-41</a>
-                    </li>
-                   </ul>
-              </section>
-              <div class="contacts__address-wrapper">
-                <section class="contacts__support-tel">
-                  <h2 class="contacts__subtitle">Круглосуточная техподдержка:</h2>
-                  <a class="contacts__tel-link" href="tel:+380503578534">(050) 357-85-34</a>
-                </section>
-                <section class="contacts__address">
-                  <h2 class="contacts__subtitle">Адрес компании:</h2>
-                  <div class="contacts__addr-item">г.&thinsp;Борисполь, Киевский Шлях 79, 2 этаж
-                    <span>ПН&thinsp;–&thinsp;ПТ с 09:00 до 18:00</span>
+          <div class="contacts__background">
+            <div class="contacts__inner">
+
+              <article class="contacts__form-wrapper">
+
+                <h2 class="contacts__subtitle">Напишите нам</h2>
+
+                <form class="contacts__form" action="/">
+                  <div class="contacts__input-wrapper">
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <span class="info-message  error-message"></span>
                   </div>
-                </section>
-              </div>
-            </article>
+                  <div class="contacts__input-wrapper">
+                    <input type="tel" name="tel" placeholder="Телефон">
+                    <span class="info-message  error-message"></span>
+                  </div>
+                  <div class="contacts__input-wrapper">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <span class="info-message  error-message"></span>
+                  </div>
+                  <div class="contacts__input-wrapper">
+                    <textarea name="message" placeholder="Сообщение" required></textarea>
+                    <span class="info-message  error-message"></span>
+                  </div>
+                  <div class="contacts__input-wrapper">
+                    <button class="btn" type="submit">Отправить</button>
+                  </div>
+                </form>
+
+              </article>
+
+              <article class="contacts__map">
+
+                <h2 class="contacts__subtitle">Наш адрес:</h2>
+                <p class="contacts__address">
+                  г. Борисполь, ул. Киевский Шлях 79, 2
+                  <span>ПН - ПТ с 09:00 до 18:00</span>
+                </p>
+
+                <div id="contacts-map" class="contacts__map-content">
+                  Карта тут будет
+                </div>
+                <!-- key: AIzaSyD3PErLTEa9Qk_jVjPSJ41ecUR6y9yLZQo
+                -->
+              </article>
+
+            </div>
           </div>
 
-          <div class="row-full">
-            <article class="map">
-              <div class="map_wrapper">
-                Карта тут будет
-              </div>
-            </article>
-          </div>
         </div>
 
       </main>
@@ -75,6 +84,37 @@
   </div>
 
   @@include('_include/page_bottom.html')
+  <script>
+      function initMap() {
+        var borispol = {lat: 50.3496573, lng: 30.9527258};
+        var contactMap = new google.maps.Map(document.getElementById('contacts-map'), {
+          zoom: 16,
+          center: borispol
+        });
+        var image = 'img/pin.png';
+        var contentString = '<div style="color:gray;"><h3 style="margin:5px 0;color:#A83B7B">Boryspil.net</h3><p>г. Борисполь, <br> ул. Киевский Шлях 79, 2<p style="font-size:1.1em;">ПН - ПТ с 09:00 до 18:00</p></p></div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = new google.maps.Marker({
+          position: borispol,
+          map: contactMap,
+          icon: image,
+          animation: google.maps.Animation.DROP
+        });
+
+        marker.addListener('mouseover', function () {
+          infowindow.open(contactMap, marker);
+        });
+
+        marker.addListener('mouseout', function () {
+          infowindow.close(contactMap, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3PErLTEa9Qk_jVjPSJ41ecUR6y9yLZQo&callback=initMap">
+    </script>
 
 </body>
 </html>
