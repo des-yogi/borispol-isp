@@ -1,0 +1,177 @@
+// Default plugin styles
+
+.accordionjs {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  // Section
+  // ---------------
+  .acc_section {
+    border: 2px solid #EBEBEB;
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+
+    // Head
+    // ------------
+    .acc_head {
+      position: relative;
+      background: #fff;
+      padding: 15px;
+      display: block;
+      cursor: pointer;
+
+      @media(min-width: $screen-md) {
+        padding: 30px !important;
+      }
+
+      h3 {
+        line-height: 1;
+        margin: 5px 0;
+      }
+    }
+
+    // Content
+    // ---------------
+    .acc_content{
+      padding: 10px;
+    }
+
+    // General rules
+    // ---------------------
+    // Border radius
+    &:first-of-type,
+    &:first-of-type .acc_head{
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+    &:last-of-type,
+    &:last-of-type .acc_content{
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    //JS Requirements
+    &.acc_active{
+      > .acc_content{
+        display: block;
+      }
+      > .acc_head{
+        background-color: $white;
+        // border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}
+
+// my styles
+
+.faq {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $light-bg-color;
+
+  @media(min-width: $screen-xl) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 1px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-main;
+
+    @media(min-width: $screen-xl) {
+      margin-bottom: 30px;
+      padding-left: 35px;
+      text-align: left;
+    }
+  }
+
+  &__inner {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media(min-width: $screen-md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__accordion {
+    // max-width: 100%;
+    // overflow: hidden;
+
+    @media(min-width: $screen-xl) {
+      margin-left: -30px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    background-color: $white;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media(min-width: $screen-xl) {
+      float: left;
+      width: calc(50% - 30px);
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle,
+  &__content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    // padding-top: 15px !important;
+    font-size: 16px;
+
+    @media(min-width: $screen-md) {
+      font-size: 20px;
+    }
+
+    @media(min-width: $screen-lg) {
+      font-size: 22px;
+    }
+  }
+
+  &__content {
+    font-size: 15px;
+
+    @media(min-width: $screen-md) {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      padding-bottom: 30px !important;
+      font-size: 16px;
+    }
+
+    @media(min-width: $screen-xl) {
+      // display: block !important;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: inherit;
+    }
+  }
+}

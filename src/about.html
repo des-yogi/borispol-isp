@@ -18,294 +18,43 @@
 
       <main role="main">
 
-        <article class="hero  container">
-          <div id="hero-slider" class="owl-carousel  hero__slider">
-            <section class="owl-carousel__item  hero__item">
-              <div class="hero__text">
-                <p class="hero__para">Подключись к телевидению нового поколения сегодня и получи…</p>
-                <h2 class="hero__title">3 месяца в подарок!</h2>
-                <a href="" class="hero__link-btn">Заказать</a>
-              </div>
-              <div class="hero__img-wrapper">
-                <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
-              </div>
-            </section>
-            <section class="owl-carousel__item  hero__item">
-              <div class="hero__text">
-                <p class="hero__para">Подключись к телевидению нового поколения сегодня и получи</p>
-                <h2 class="hero__title">3 месяца в подарок!</h2>
-                <a href="" class="hero__link-btn">Заказать</a>
-              </div>
-              <div class="hero__img-wrapper">
-                <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
-              </div>
-            </section>
-            <section class="owl-carousel__item  hero__item">
-              <div class="hero__text">
-                <p class="hero__para">Подключись к телевидению нового поколения сегодня и получи</p>
-                <h2 class="hero__title">3 месяца в подарок!</h2>
-                <a href="" class="hero__link-btn">Заказать</a>
-              </div>
-              <div class="hero__img-wrapper">
-                <img src="img/owl-img.png" alt="Слайд 1" width="413" height="307">
-              </div>
-            </section>
-          </div>
-        </article>
+        <div class="container  content">
 
-        <article class="request">
-          <div class="container  request__inner">
-            <form id="request-form" class="request__form" name="request-form" action="" method="">
+          <h1 class="content__title">О нас</h1>
 
-              <div class="row-full  request__part-one-wrapper">
+          <article class="content__article  clearfix">
 
-                <div class="request__part-one">
-                  <h2 class="request__title">Заявка на подключение</h2>
+            <img src="img/content-img.jpg" alt="Картинка" width="320" height="250">
 
-                  <div class="request__choice-service">
-                    <span class="request__subtitle">Выберите услугу</span>
-                    <input id="inet-service" type="radio" name="service-type" checked>
-                    <label class="btn  btn--services" for="inet-service"><span>Интернет</span>
-                    </label>
-                    <input id="tv-service" type="radio" name="service-type">
-                    <label class="btn  btn--services" for="tv-service"><span>Телевидение</span>
-                    </label>
-                  </div>
-
-                  <div class="request__select-props">
-                    <span class="request__subtitle">Подключение в</span>
-
-                    <div class="row  request__icons-container">
-                      <div class="request__icons-wrapper">
-                        <input id="privat" type="radio" name="real-estate-type" checked>
-                        <label for="privat">Частный сектор
-                          <span>
-                            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#privat-icon"></use></svg>
-                          </span>
-                        </label>
-                        <div class="request__icons-text">Частный сектор</div>
-                      </div>
-
-                      <div class="request__icons-wrapper">
-                        <input id="apartment" type="radio" name="real-estate-type">
-                        <label for="apartment">Многоквартирный дом
-                          <span>
-                            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#multistory-icon"></use></svg>
-                          </span>
-                        </label>
-                        <div class="request__icons-text">Многоквартирные дома</div>
-                      </div>
-
-                      <div class="request__icons-wrapper">
-                        <input id="office" type="radio" name="real-estate-type">
-                        <label for="office">Для юридических лиц
-                          <span>
-                            <svg width="26" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#office-icon"></use></svg>
-                          </span>
-                        </label>
-                        <div class="request__icons-text">Для юридических лиц</div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <div class="request__select-rate">
-                    <span class="request__subtitle">Выберите тариф</span>
-                    <label class="field-select">
-                      <div class="field-select__select-wrap  request__select-wrapper">
-                        <select class="field-select__select  request__select-options" name="rate" required>
-                          <option value="rate-12">Реактивный 12</option>
-                          <option value="rate-20-plus">Реактивный 20*</option>
-                          <option value="rate-25">Реактивный 25</option>
-                          <option value="rate-40">Реактивный 40</option>
-                          <option value="rate-200-plus" selected>Реактивный 200**</option>
-                        </select>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="row-full  request__part-two-wrapper">
-
-                <div class="request__part-two">
-                  <h3 class="request__address">Адрес подключения</h3>
-                  <div class="request__input-wrapper  request__input-wrapper--multi">
-                    <input type="text" name="street" placeholder="Улица" required>
-                    <input type="text" name="house" placeholder="Дом" required>
-                    <input type="text" name="apartment" placeholder="Кв." required>
-                    <span class="info-message"></span>
-                  </div>
-                  <div class="request__input-wrapper">
-                    <input type="text" name="name" placeholder="ФИО" required>
-                    <span class="info-message"></span>
-                  </div>
-                  <div class="request__input-wrapper">
-                    <input type="tel" name="tel" placeholder="Телефон" required>
-                    <span class="info-message"></span>
-                  </div>
-                  <div class="request__input-wrapper">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <span class="info-message">Проверка</span>
-                  </div>
-                  <div class="request__input-wrapper">
-                    <button class="btn" type="submit">Отправить</button>
-                  </div>
-                </div>
-
-              </div>
-
-            </form>
-          </div>
-        </article>
-
-        <div class="container">
-
-          <article class="row-full  action">
-
-            <h2 class="action__title">Акции</h2>
-
-            <div id="actions-slider" class="owl-carousel  action__slider">
-
-              <article class="action__item">
-                <a class="action__item-link" href="">
-                  <div class="action__img-wrapper">
-                    <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text">
-                    <h3 class="action__subtitle">АКЦИЯ 1!</h3>
-                    <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <a href="" class="action__readmore-link">Поподробнее
-                      <span>
-                        <svg width="13" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
-                      </span>
-                    </a>
-                  </div>
-                </a>
-              </article>
-
-              <article class="action__item">
-                <a href="" class="action__item-link">
-                  <div class="action__img-wrapper">
-                    <img src="img/action-img-2.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text">
-                    <h3 class="action__subtitle">АКЦИЯ 2!</h3>
-                    <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <a href="" class="action__readmore-link">Поподробнее
-                      <span>
-                        <svg width="13" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
-                      </span>
-                    </a>
-                  </div>
-                </a>
-              </article>
-
-              <article class="action__item">
-                <a href="" class="action__item-link">
-                  <div class="action__img-wrapper">
-                    <img src="img/action-img-3.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text">
-                    <h3 class="action__subtitle">АКЦИЯ 3!</h3>
-                    <p class="action__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <a href="" class="action__readmore-link">Поподробнее
-                      <span>
-                        <svg width="12" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
-                      </span>
-                    </a>
-                  </div>
-                </a>
-              </article>
-
-            </div>
-
-            <div class="action__btn-wrapper">
-              <a class="action__all-actions-link" href="">
-                <span class="action__link-text-wrapper">Все действующие акции
-                  <span class="action__icon-wrapper">
-                  <svg width="12" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
-                </span>
-                </span>
-              </a>
-            </div>
-
+            <h2>Интернет-провайдер «Boryspil.net»</h2>
+            <p>Начал свою работу в 2008 году и на данный момент является одним из крупнейших поставщиков услуг доступа к сети Интернет в городе Борисполь. Сеть «Boryspil.net» строится на базе оптическо — волоконных линий связи, что позволяет внедрять новые технологии и предоставлять качественные услуги абонентам сети. </p>
+            <p>Локальная домашняя сеть — это сеть, которая проведена в Вашем и других домах, которые соединяются между собой высокоскоростными каналами связи. Сетевые кабели, розбросаные по домам и квартирам, подсоединяются к нашему маршрутизатору. Таким образом, большое количество жителей домов становятся пользователями одной большой сети. Мы занимаемся прокладкой такой сети и обеспечиваем выход в Интернет.</p>
+            <p>Интернет-провайдер «Boryspil.net» является одним из лидеров на рынке интернет услуг города Борисполь. </p>
+            <h2>Наши преимущества:</h2>
+            <ul>
+              <li>высокоскоростной доступ к сети Интернет</li>
+              <li>надежная техническая поддержка</li>
+              <li>полный спектр услуг по подключению и последующему обслуживанию клиентов</li>
+              <li>Вы имеете свой личный кабинет</li>
+              <li>наличие безлимитных тарифных планов. То есть, Вы оплачиваете наши услуги только раз в месяц, как, например, коммунальные платежи и пользуетесь быстрым Интернетом, независимо от того, сколько времени и в каких обьемах Вы используете ресурсы Internet.</li>
+              <li>скидки для постоянных абонентов</li>
+              <li>свободная телефонная линия</li>
+              <li>соединение с Internet происходит по технологии «выделенной линии». Это значит, что Вам не нужно никаких модемов или другого дополнительного оборудования.</li>
+            </ul>
+            <h2>В сети Internet Вы можете найти:</h2>
+            <ul>
+              <li>образовательные и познавательные ресурсы</li>
+              <li>энциклопедии и словари</li>
+              <li>информационно-поисковые службы</li>
+              <li>развлекательные ресурсы</li>
+              <li>справочные ресурсы (расписание поездов, погода, телефонные коды и номера)</li>
+              <li>рекламные объявления</li>
+              <li>Internet-магазины</li>
+              <li>Internet-банки (Internet-деньги)</li>
+            </ul>
           </article>
 
-          <article class="row-full  action news">
-
-            <h2 class="action__title  news__title">Новости</h2>
-
-            <div id="news-slider" class="owl-carousel  action__slider  news__slider">
-
-              <article class="action__item  news__item">
-                <a class="action__item-link  news__item-link" href="">
-                  <div class="action__img-wrapper  news__img-wrapper">
-                    <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text  news__text">
-                    <h3 class="action__subtitle  news__subtitle">Новость 1!</h3>
-                    <p class="action__para  news__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <p class="action__para  news__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <span class="news__date">12.04.17</span>
-                  </div>
-                </a>
-              </article>
-
-              <article class="action__item  news__item">
-                <a class="action__item-link  news__item-link" href="">
-                  <div class="action__img-wrapper  news__img-wrapper">
-                    <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text  news__text">
-                    <h3 class="action__subtitle  news__subtitle">Новость 2!</h3>
-                    <p class="action__para  news__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <span class="news__date">12.04.17</span>
-                  </div>
-                </a>
-              </article>
-
-              <article class="action__item  news__item">
-                <a class="action__item-link  news__item-link" href="">
-                  <div class="action__img-wrapper  news__img-wrapper">
-                    <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text  news__text">
-                    <h3 class="action__subtitle  news__subtitle">Новость 3!</h3>
-                    <p class="action__para  news__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <span class="news__date">12.04.17</span>
-                  </div>
-                </a>
-              </article>
-
-              <article class="action__item  news__item">
-                <a class="action__item-link  news__item-link" href="">
-                  <div class="action__img-wrapper  news__img-wrapper">
-                    <img src="img/action-img-1.jpg" alt="Акция" width="353" height="200">
-                  </div>
-                  <div class="action__text  news__text">
-                    <h3 class="action__subtitle  news__subtitle">Новость 4!</h3>
-                    <p class="action__para  news__para  emphasized">Подключись к телевидению нового поколения сегодня и получи 3 месяца в подарок!</p>
-                    <span class="news__date">12.04.17</span>
-                  </div>
-                </a>
-              </article>
-
-            </div>
-
-            <div class="action__btn-wrapper  news__btn-wrapper">
-              <a class="action__all-actions-link  news__all-actions-link" href="">
-                <span class="action__link-text-wrapper  news__link-text-wrapper">Все новости
-                  <span class="action__icon-wrapper">
-                  <svg width="12" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#select-down"></use></svg>
-                </span>
-                </span>
-              </a>
-            </div>
-
-          </article>
+        </div>
 
       </main>
 

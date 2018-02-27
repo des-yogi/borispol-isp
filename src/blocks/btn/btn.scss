@@ -114,6 +114,16 @@ $border-radius:               5px !default;
     }
   }
 
+  &--request {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:hover,
+    &:focus {
+      color: $color-violet;
+    }
+  }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;

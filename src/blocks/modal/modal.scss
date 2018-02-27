@@ -46,7 +46,7 @@ $z-index-modal:               100 !default;
     height: 100%;
 
     @media (min-width: $screen-lg) {
-      width: 600px;
+      width: 500px;
       height: auto;
 
       #{$block-name}--open & {
@@ -81,8 +81,8 @@ $z-index-modal:               100 !default;
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 20px;
   }
 
   &__body {

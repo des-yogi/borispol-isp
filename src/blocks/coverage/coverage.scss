@@ -1,0 +1,141 @@
+// В этом файле должны быть стили для БЭМ-блока coverage, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.coverage {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $color-success;
+  background-color: $light-bg-color;
+
+  // Настройка зеленой темы блока Подключение - Начало
+
+  .request__inner {
+    @media (min-width: $screen-xl) {
+      background: radial-gradient(1657.93px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+    }
+  }
+
+  .request__title {
+    color: $color-success;
+  }
+
+  .btn--services:hover::after {
+    background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+  }
+
+  .request__choice-service label {
+    background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+
+    &:hover {
+      background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+    }
+  }
+
+  .request__choice-service input:checked + label::after {
+    background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+  }
+
+  .request__select-props label {
+    background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+    color: $color-success;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .request__select-options {
+    border-color: $color-success;
+  }
+
+  .field-select__select {
+    background-image: svg-load('../blocks/field-select/img_to_bg/select-down-green.svg');
+  }
+
+  .request__part-two-wrapper {
+    background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+
+    @media (min-width: $screen-xl) {
+      background: none;
+    }
+  }
+
+  .request__inner::before,
+  .request__inner::after {
+    @media (min-width: $screen-xl) {
+      background: $light-bg-color;
+    }
+  }
+
+  .btn:hover,
+  .btn:focus {
+    color: $color-success;
+  }
+  .btn--services:hover,
+  .btn--services:focus {
+    color: $white;
+  }
+
+  // Настройка зеленой темы блока Подключение - Конец
+
+  @media (min-width: $screen-xl) {
+    width: 1180px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__container {
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 0;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    text-align: center;
+    color: $white;
+
+    @media (min-width: $screen-md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 20px;
+    background: radial-gradient(1657.93px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
+
+    @media (min-width: $screen-md) {
+      margin-left: -25px;
+      margin-right: -25px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+      margin-left: -40px;
+      margin-right: -40px;
+      padding-bottom: 50px;
+    }
+  }
+
+}
