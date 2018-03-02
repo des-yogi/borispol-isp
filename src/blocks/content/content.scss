@@ -69,24 +69,13 @@
 
   &__img,
   img {
-    display: inline-block;
+    display: block;
     width: 100%;
-    vertical-align: top;
     overflow: hidden;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 25px;
     object-fit: cover;
     object-position: center;
-
-    &:nth-of-type(n+2) {
-      @media (min-width: $screen-md) {
-        margin-top: 15px;
-      }
-
-      @media (min-width: $screen-lg) {
-        margin-top: 20px;
-      }
-    }
 
     @media (min-width: $screen-sm) {
       max-width: 350px;
@@ -96,7 +85,6 @@
       float: left;
       margin-right: 30px;
       margin-left: -15px;
-      margin-top: 0;
       margin-bottom: 15px;
     }
 
@@ -109,8 +97,17 @@
 
   &__para,
   p {
-    @media (min-width: $screen-md) {
 
+    img {
+      margin-top: 25px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 15px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 20px;
+      }
     }
   }
 }

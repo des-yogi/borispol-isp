@@ -192,6 +192,13 @@
     }
   }
 
+/*   &__privat {
+  @media (min-width: $screen-xl) {
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+} */
+
   &__table {
     width: 100%;
     border-collapse: collapse;
@@ -230,6 +237,10 @@
   .rates__table-row {
     border: 3px solid $white;
     border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      border: none;
+    }
   }
 
   .rates__head {

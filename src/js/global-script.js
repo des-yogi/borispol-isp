@@ -155,9 +155,9 @@ $(document).ready(function(){
       // clickedElem.nextElementSibling.style.display = 'block';
       clickedElem.nextElementSibling.classList.toggle('main-nav__sublist-wrapper--open');
 
-      setTimeout(function () {
+      /*setTimeout(function () {
         clickedElem.nextElementSibling.classList.remove('main-nav__sublist-wrapper--open');
-      }, 3000);
+      }, 3000);*/
     }
 
 
