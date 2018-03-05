@@ -9,8 +9,8 @@
   $block-name:                &; // #{$block-name}__element
 
   &__slider {
-    padding-top: 15px;
-    padding-bottom: 7px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 
     @media (min-width: $screen-md) {
       padding-top: 80px;
@@ -18,7 +18,8 @@
     }
 
     @media (min-width: $screen-lg) {
-      padding-top: 35px;
+      padding-top: 50px;
+      padding-bottom: 20px;
     }
   }
 
@@ -26,24 +27,28 @@
 
     @media (min-width: $screen-md) {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: space-between;
+      // align-items: flex-start;
+      // padding-left: 5%;
+      // padding-right: 5%;
+      margin-bottom: 50px;
+    }
 
-      @media (min-width: $screen-md) {
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-bottom: 50px;
-      }
+    @media (min-width: $screen-lg) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
 
-      @media (min-width: $screen-lg) {
-        padding-left: 0;
-        padding-right: 0;
-        margin-bottom: 0;
-      }
+    @media (min-width: $screen-xl) {
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 
   &__text {
+    flex-shrink: 1;
+    margin-bottom: 20px;
 
     @media (min-width: $screen-md) {
       order: 1;
@@ -73,6 +78,10 @@
     @media (min-width: $screen-md) {
       margin-bottom: 25px;
     }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 150px;
+    }
   }
 
   &__link-btn {
@@ -100,25 +109,36 @@
   &__img-wrapper {
     // max-width: 204px;
     // max-height: 150px;
-
+    flex-shrink: 0;
+    // flex-grow: 1;
+    max-height: 200px;
     overflow: hidden;
 
     img {
       display: inline-block;
-      width: 220px;
-      max-height: 180px;
+      width: 100%;
+      height: auto;
       object-fit: contain;
-      object-position: left center;
+      object-position: center;
+    }
 
-      @media (min-width: $screen-md) {
-        width: 287px;
-        max-height: 230px;
-      }
+    @media (min-width: $screen-sm) {
+      max-height: 250px;
+    }
 
-      @media (min-width: $screen-xl) {
-        width: 406px;
-        max-height: 300px;
-      }
+    @media (min-width: $screen-md) {
+      max-width: 45%;
+      max-height: 250px;
+      margin-right: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-height: 300px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 40%;
+      max-height: 350px;
     }
   }
 
@@ -131,17 +151,18 @@
   }
 
   .owl-dots {
+    margin-top: 15px !important;
 
     @media (min-width: $screen-md) {
-      margin-top: 70px;
+      margin-top: 10px !important;
     }
 
     @media (min-width: $screen-lg) {
-      margin-top: 50px;
+      margin-top: 40px !important;
     }
 
     @media (min-width: $screen-xl) {
-      margin-top: 30px;
+      margin-top: 45px !important;
     }
   }
 
