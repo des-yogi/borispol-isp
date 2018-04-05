@@ -4,26 +4,37 @@
 
 .hero {
   margin-bottom: 30px;
-  background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
+  // background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
+
+  @include container (
+    $xs-grid-gutter: 0,
+    $sm-grid-gutter: 0,
+    $md-grid-gutter: 0,
+    $lg-grid-gutter: 0,
+    $xl-grid-gutter: 0
+  )
 
   $block-name:                &; // #{$block-name}__element
 
   &__slider {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    // padding-top: 20px;
+    // padding-bottom: 10px;
 
     @media (min-width: $screen-md) {
-      padding-top: 80px;
+      // padding-top: 80px;
       // padding-bottom: 80px;
     }
 
     @media (min-width: $screen-lg) {
-      padding-top: 50px;
-      padding-bottom: 20px;
+      // padding-top: 50px;
+      // padding-bottom: 20px;
     }
   }
 
   &__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
 
     @media (min-width: $screen-md) {
       display: flex;
@@ -32,11 +43,14 @@
       // padding-left: 5%;
       // padding-right: 5%;
       margin-bottom: 50px;
+      padding-top: 80px;
     }
 
     @media (min-width: $screen-lg) {
       padding-left: 0;
       padding-right: 0;
+      padding-top: 50px;
+      padding-bottom: 20px;
       margin-bottom: 0;
     }
 
