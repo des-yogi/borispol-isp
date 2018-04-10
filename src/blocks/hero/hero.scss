@@ -4,68 +4,108 @@
 
 .hero {
   margin-bottom: 30px;
-  background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
+  // background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
+
+  @include container (
+    $xs-grid-gutter: 0,
+    $sm-grid-gutter: 0,
+    $md-grid-gutter: 0,
+    $lg-grid-gutter: 0,
+    $xl-grid-gutter: 0
+  )
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 50px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__slider {
-    padding-top: 15px;
-    padding-bottom: 7px;
+    // padding-top: 20px;
+    // padding-bottom: 10px;
 
     @media (min-width: $screen-md) {
-      padding-top: 80px;
+      // padding-top: 80px;
       // padding-bottom: 80px;
     }
 
     @media (min-width: $screen-lg) {
-      padding-top: 35px;
+      // padding-top: 50px;
+      // padding-bottom: 20px;
     }
   }
 
   &__item {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: radial-gradient(1256.70px at 0% 0%, #57A6F0 0%, #6DC4F8 100%);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 
     @media (min-width: $screen-md) {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
 
-      @media (min-width: $screen-md) {
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-bottom: 50px;
-      }
+    @media (min-width: $screen-lg) {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 0;
+    }
 
-      @media (min-width: $screen-lg) {
-        padding-left: 0;
-        padding-right: 0;
-        margin-bottom: 0;
-      }
+    @media (min-width: $screen-xl) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
   }
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 5px solid $white;
+
+    p {
+      margin: 0;
+      font-family: $font-family--headings;
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+    }
+
+    p + p {
+      margin-top: 10px;
+    }
 
     @media (min-width: $screen-md) {
-      order: 1;
+      width: calc(60% - 25px);
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: calc(70% - 25px);
     }
   }
 
   &__para {
-    padding: 15px;
-    font-family: $font-family--headings;
-    font-size: 16px;
-    font-weight: 400;
-    color: $white;
-    background-color: $color-turquoise;
 
-    @media (min-width: $screen-md) {
-      padding: 20px;
-      margin-bottom: 20px;
-    }
   }
 
   &__title {
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 15px;
     text-transform: uppercase;
     color: $white;
@@ -73,52 +113,87 @@
     @media (min-width: $screen-md) {
       margin-bottom: 25px;
     }
+
+    @media (min-width: $screen-xl) {
+
+    }
+  }
+
+  &__link-wrapper {
+    margin-top: auto !important;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: right;
+    }
   }
 
   &__link-btn {
     display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 6px;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    color: $color-turquoise;
+    color: $white;
     border-left: 2px solid currentColor;
     border-right: 2px solid currentColor;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 
     &:hover {
       text-decoration: none;
-      color: $white;
-      background-color: $color-turquoise;
-      border-color: $color-turquoise;
+      border: 2px solid currentColor;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 25px;
+      padding-right: 25px;
     }
   }
 
   &__img-wrapper {
-    // max-width: 204px;
-    // max-height: 150px;
+    height: 200px;
+    max-width: 100%;
+    background-image: url(../img/banner-img-1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
 
-    overflow: hidden;
-
-    img {
+    /* img {
       display: inline-block;
-      width: 220px;
-      max-height: 180px;
+      width: auto;
+      height: 100%;
       object-fit: contain;
-      object-position: left center;
+      object-position: center;
+    } */
 
-      @media (min-width: $screen-md) {
-        width: 287px;
-        max-height: 230px;
-      }
+    @media (min-width: $screen-md) {
+      width: 40%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
 
-      @media (min-width: $screen-xl) {
-        width: 406px;
-        max-height: 300px;
-      }
+    @media (min-width: $screen-lg) {
+      width: 30%;
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    margin-top: 0 !important;
+
+    @media (min-width: $screen-xl) {
+      bottom: 15px;
     }
   }
 
@@ -130,36 +205,23 @@
     background: $white;
   }
 
-  .owl-dots {
-
-    @media (min-width: $screen-md) {
-      margin-top: 70px;
-    }
-
-    @media (min-width: $screen-lg) {
-      margin-top: 50px;
-    }
-
-    @media (min-width: $screen-xl) {
-      margin-top: 30px;
-    }
-  }
-
   .owl-nav {
     position: absolute;
-    width: calc(100% + 40px * 2);
+    width: 1180px;
     top: 50%;
-    transform: translateY(-27px);
-    left: -40px;
+    left: 0;
+    transform: translateY(-30px);
     display: flex;
     justify-content: space-between;
     margin-top: 0;
+    pointer-events: none;
 
     & > div {
       position: relative;
       width: 35px;
       height: 55px;
       background-color: $white;
+      pointer-events: auto;
 
       &::before {
         position: absolute;
@@ -170,8 +232,8 @@
         display: block;
         width: 22px;
         height: 22px;
-        border-top: 3px solid rgba(0, 0, 150, 0.35);
-        border-right: 3px solid rgba(0, 0, 150, 0.35);
+        border-top: 3px solid rgba(0, 0, 0, 0.35);
+        border-right: 3px solid rgba(0, 0, 0, 0.35);
       }
     }
 
