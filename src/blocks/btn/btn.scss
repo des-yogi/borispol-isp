@@ -37,6 +37,7 @@ $border-radius:               5px !default;
   border-radius: $border-radius;
   border: 3px solid $white;
   cursor: pointer;
+  transition: all 0.3s ease;
 
  &:hover,
  &:focus {

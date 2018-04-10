@@ -14,6 +14,10 @@
     $xl-grid-gutter: 0
   )
 
+  @media (min-width: $screen-lg) {
+    margin-bottom: 50px;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &__slider {
@@ -33,58 +37,75 @@
 
   &__item {
     padding-top: 20px;
-    padding-bottom: 20px;
-    background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: radial-gradient(1256.70px at 0% 0%, #57A6F0 0%, #6DC4F8 100%);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 
     @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
-      // align-items: flex-start;
-      // padding-left: 5%;
-      // padding-right: 5%;
-      margin-bottom: 50px;
-      padding-top: 80px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     @media (min-width: $screen-lg) {
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 50px;
-      padding-bottom: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
       margin-bottom: 0;
     }
 
     @media (min-width: $screen-xl) {
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
   }
 
   &__text {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 1;
     margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 5px solid $white;
+
+    p {
+      margin: 0;
+      font-family: $font-family--headings;
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+    }
+
+    p + p {
+      margin-top: 10px;
+    }
 
     @media (min-width: $screen-md) {
-      order: 1;
+      width: calc(60% - 25px);
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: calc(70% - 25px);
     }
   }
 
   &__para {
-    padding: 15px;
-    font-family: $font-family--headings;
-    font-size: 16px;
-    font-weight: 400;
-    color: $white;
-    background-color: $color-turquoise;
 
-    @media (min-width: $screen-md) {
-      padding: 20px;
-      margin-bottom: 20px;
-    }
   }
 
   &__title {
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 15px;
     text-transform: uppercase;
     color: $white;
@@ -94,65 +115,85 @@
     }
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 150px;
+
+    }
+  }
+
+  &__link-wrapper {
+    margin-top: auto !important;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: right;
     }
   }
 
   &__link-btn {
     display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 6px;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    color: $color-turquoise;
+    color: $white;
     border-left: 2px solid currentColor;
     border-right: 2px solid currentColor;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 
     &:hover {
       text-decoration: none;
-      color: $white;
-      background-color: $color-turquoise;
-      border-color: $color-turquoise;
+      border: 2px solid currentColor;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 25px;
+      padding-right: 25px;
     }
   }
 
   &__img-wrapper {
-    // max-width: 204px;
-    // max-height: 150px;
-    flex-shrink: 0;
-    // flex-grow: 1;
-    max-height: 200px;
-    overflow: hidden;
+    height: 200px;
+    max-width: 100%;
+    background-image: url(../img/banner-img-1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
 
-    img {
+    /* img {
       display: inline-block;
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
       object-fit: contain;
       object-position: center;
-    }
-
-    @media (min-width: $screen-sm) {
-      max-height: 250px;
-    }
+    } */
 
     @media (min-width: $screen-md) {
-      max-width: 45%;
-      max-height: 250px;
-      margin-right: 50px;
+      width: 40%;
+      margin-top: auto;
+      margin-bottom: auto;
     }
 
     @media (min-width: $screen-lg) {
-      max-height: 300px;
+      width: 30%;
     }
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    margin-top: 0 !important;
 
     @media (min-width: $screen-xl) {
-      max-width: 40%;
-      max-height: 350px;
+      bottom: 15px;
     }
   }
 
@@ -164,37 +205,23 @@
     background: $white;
   }
 
-  .owl-dots {
-    margin-top: 15px !important;
-
-    @media (min-width: $screen-md) {
-      margin-top: 10px !important;
-    }
-
-    @media (min-width: $screen-lg) {
-      margin-top: 40px !important;
-    }
-
-    @media (min-width: $screen-xl) {
-      margin-top: 45px !important;
-    }
-  }
-
   .owl-nav {
     position: absolute;
-    width: calc(100% + 40px * 2);
+    width: 1180px;
     top: 50%;
-    transform: translateY(-27px);
-    left: -40px;
+    left: 0;
+    transform: translateY(-30px);
     display: flex;
     justify-content: space-between;
     margin-top: 0;
+    pointer-events: none;
 
     & > div {
       position: relative;
       width: 35px;
       height: 55px;
       background-color: $white;
+      pointer-events: auto;
 
       &::before {
         position: absolute;
@@ -205,8 +232,8 @@
         display: block;
         width: 22px;
         height: 22px;
-        border-top: 3px solid rgba(0, 0, 150, 0.35);
-        border-right: 3px solid rgba(0, 0, 150, 0.35);
+        border-top: 3px solid rgba(0, 0, 0, 0.35);
+        border-right: 3px solid rgba(0, 0, 0, 0.35);
       }
     }
 

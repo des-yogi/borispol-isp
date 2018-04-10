@@ -8,19 +8,21 @@ $(document).ready(function(){
   $("#hero-slider").owlCarousel({
     items: 1,
     loop: true,
+    dots: true,
+    autoHeight: true,
     // autoplay: true,
     // autoplayTimeout: 3000,
     // autoplayHoverPause: true,
     responsive:{
-        0:{
-          nav: false
-        },
-        768:{
-          nav: false
-        },
-        1200:{
-          nav: true
-        }
+      0:{
+        nav: false
+      },
+      768:{
+        nav: false
+      },
+      1200:{
+        nav: true
+      }
     }
   });
 
