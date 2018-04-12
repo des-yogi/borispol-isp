@@ -169,13 +169,15 @@
     background-color: $gray-lighter;
 
     @media (min-width: $screen-md) {
-      height: 380px;
+      //height: 380px;
+      height: 485px;
       margin-left: -25px;
       margin-right: -20px;
     }
 
     @media (min-width: $screen-xl) {
-      height: 410px;
+      //height: 410px;
+      height: 515px;
       margin-left: -40px;
       margin-right: -40px;
     }

@@ -274,6 +274,16 @@
         background: none;
       }
     }
+
+    input:disabled + label {
+      color: $gray-lighter;
+      background: $gray-lighter;
+      pointer-events: none;
+
+      span {
+        background: $white;
+      }
+    }
   }
 
   &__icons-container {
@@ -330,6 +340,7 @@
     color: $text-color;
     border: 3px solid $color-main;
     border-radius: $border-radius;
+    cursor: pointer;
 
     &:hover,
     &:focus {
