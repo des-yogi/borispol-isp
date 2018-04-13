@@ -113,6 +113,7 @@ $(document).ready(function(){
   // var otherPlace = document.querySelectorAll('body');
 
   if (phoneClickPlace) {
+
     phoneClickPlace.addEventListener('click', function (e) {
       if ( !phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
         phoneClickPlace.classList.add('user-nav__phone-list--open');
@@ -120,7 +121,19 @@ $(document).ready(function(){
       } else {
           phoneClickPlace.classList.add('user-nav__phone-list--close');
           phoneClickPlace.classList.remove('user-nav__phone-list--open');
+        }
+    });
+
+    phoneClickPlace.addEventListener('mouseover', function (e) {
+      if ( !phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
+        phoneClickPlace.classList.add('user-nav__phone-list--open');
+        phoneClickPlace.classList.remove('user-nav__phone-list--close');
       }
+
+      setTimeout(function () {
+        phoneClickPlace.classList.add('user-nav__phone-list--close');
+        phoneClickPlace.classList.remove('user-nav__phone-list--open');
+      }, 5000);
     });
   }
 
@@ -135,7 +148,6 @@ $(document).ready(function(){
     }
 
   });
-
 
 }());
 
@@ -215,6 +227,7 @@ $(document).ready(function(){
   if (privatBtn) {
     privatBtn.addEventListener('click', function(e) {
       if (privatSelect.classList.contains('hidden')) {
+        privatSelect.children["0"].selected = true;
         privatSelect.classList.remove('hidden');
         multistorySelect.classList.add('hidden');
         officeSelect.classList.add('hidden');
@@ -226,6 +239,7 @@ $(document).ready(function(){
   if (multistoryBtn) {
     multistoryBtn.addEventListener('click', function(e) {
       if (multistorySelect.classList.contains('hidden')) {
+        multistorySelect.children["0"].selected = true;
         multistorySelect.classList.remove('hidden');
         privatSelect.classList.add('hidden');
         officeSelect.classList.add('hidden');
@@ -237,6 +251,7 @@ $(document).ready(function(){
   if (officeBtn) {
     officeBtn.addEventListener('click', function(e) {
       if (officeSelect.classList.contains('hidden')) {
+        officeSelect.children["0"].selected = true;
         officeSelect.classList.remove('hidden');
         privatSelect.classList.add('hidden');
         multistorySelect.classList.add('hidden');
