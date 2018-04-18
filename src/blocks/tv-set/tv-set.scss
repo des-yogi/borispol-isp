@@ -1,0 +1,213 @@
+// В этом файле должны быть стили для БЭМ-блока tv-set, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.content.tv-set {
+  padding-bottom: 0;
+}
+
+.tv-set {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__block {
+    padding-top: 30px;
+    padding-bottom: 0;
+    background-color: $white;
+  }
+
+  &__intro {
+    margin-bottom: 25px;
+  }
+
+  &__intro-inner {
+
+    &:first-child {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    &--img {
+      display: flex;
+      justify-content: center;
+
+      img {
+        display: block;
+        width: 290px;
+        margin: auto;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase !important;
+    color: $color-success;
+  }
+
+  &__para {
+    font-size: 16px;
+  }
+
+  &__rates {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    background: linear-gradient(to right, #63D1AB, #93DA9F);
+  }
+
+  &__block-rate {
+    margin-bottom: 25px;
+    border: 3px solid $white;
+    border-radius: $border-radius;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    // text-align: center;
+    font-family: $font-family--headings;
+    color: $white;
+
+    p {
+      font-family: inherit;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    span {
+      display: block;
+      font-family: inherit;
+      font-size: 14px;
+    }
+  }
+
+  &__rate-name {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    font-size: 18px;
+    // text-align: center;
+    text-transform: uppercase;
+    background-color: $white;
+  }
+
+  &__rate-list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__rate-item {
+    font-size: 20px;
+    color: $white;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__rate-link {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: $font-family--headings;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-success;
+    background-color: $white;
+    cursor: pointer;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    min-height: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__features-img {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: none !important;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icons {
+
+  }
+
+  &__icon-movie,
+  &__icon-tv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      flex-grow: 0;
+      display: block;
+      width: 78px;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+      margin-left: 25px;
+      font-family: $font-family--headings;
+      font-size: 22px;
+      font-weight: 500;
+      color: $color-success;
+    }
+  }
+
+  &__item-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    border-radius: &border-radius;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+}
