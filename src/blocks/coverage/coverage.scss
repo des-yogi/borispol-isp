@@ -26,7 +26,8 @@
     background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
   }
 
-  .request__choice-service label {
+  .request__choice-service label,
+  .request__choice-service a {
     background: radial-gradient(155.18px at 12.15% 12.15%, #63D1AB 0%, #93DA9F 100%, #93DA9F 100%);
 
     &:hover {
@@ -68,6 +69,10 @@
     @media (min-width: $screen-xl) {
       background: $light-bg-color;
     }
+  }
+
+  .request__icons-text {
+    color: $text-color;
   }
 
   .btn:hover,

@@ -122,12 +122,28 @@
                     <label class="field-select">
                       <div class="field-select__select-wrap  request__select-wrapper">
                         <select class="field-select__select  request__select-options" name="rate">
-                          <option value="rate-12">Реактивный 12</option>
-                          <option value="rate-20-plus">Реактивный 20*</option>
-                          <option value="rate-25">Реактивный 25</option>
-                          <option value="rate-40">Реактивный 40</option>
-                          <option value="rate-200-plus" selected>Реактивный 200**</option>
+                          <optgroup id="rate-privat">
+                            <option value="unlim155">Unlim 155</option>
+                            <option value="unlim205">Unlim 205</option>
+                            <option value="unlim250">Unlim 250</option>
+                          </optgroup>
+
+                          <optgroup id="rate-multistory" class="hidden">
+                            <option value="react12">Реактивный 12</option>
+                            <option value="react20plus">Реактивный 20*</option>
+                            <option value="react25">Реактивный 25</option>
+                            <option value="react40">Реактивный 40</option>
+                            <option value="react200plus">Реактивный 200**</option>
+                          </optgroup>
+
+                          <optgroup id="rate-office" class="hidden">
+                            <option value="office2">Офис-2</option>
+                            <option value="office3">Офис-3</option>
+                            <option value="office4">Офис-4</option>
+                          </optgroup>
+
                         </select>
+
                       </div>
                     </label>
                   </div>
@@ -155,7 +171,7 @@
                   </div>
                   <div class="request__input-wrapper">
                     <input type="email" name="email" placeholder="Email" required>
-                    <span class="info-message">Проверка</span>
+                    <span class="info-message"></span>
                   </div>
                   <div class="request__input-wrapper">
                     <button class="btn" type="submit">Отправить</button>

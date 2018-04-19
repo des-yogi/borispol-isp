@@ -113,6 +113,7 @@ $(document).ready(function(){
   // var otherPlace = document.querySelectorAll('body');
 
   if (phoneClickPlace) {
+
     phoneClickPlace.addEventListener('click', function (e) {
       if ( !phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
         phoneClickPlace.classList.add('user-nav__phone-list--open');
@@ -120,7 +121,19 @@ $(document).ready(function(){
       } else {
           phoneClickPlace.classList.add('user-nav__phone-list--close');
           phoneClickPlace.classList.remove('user-nav__phone-list--open');
+        }
+    });
+
+    phoneClickPlace.addEventListener('mouseover', function (e) {
+      if ( !phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
+        phoneClickPlace.classList.add('user-nav__phone-list--open');
+        phoneClickPlace.classList.remove('user-nav__phone-list--close');
       }
+
+      setTimeout(function () {
+        phoneClickPlace.classList.add('user-nav__phone-list--close');
+        phoneClickPlace.classList.remove('user-nav__phone-list--open');
+      }, 5000);
     });
   }
 
@@ -136,7 +149,6 @@ $(document).ready(function(){
 
   });
 
-
 }());
 
 (function(){
@@ -147,15 +159,29 @@ $(document).ready(function(){
   var menu = document.querySelector('.main-nav__list');
   var menuLvlTwo = document.querySelector('.main-nav__sublist-wrapper--lvl-2');
 
-  menu.addEventListener('click', function(e) {
-    var clickedElem = e.target;
-    if (clickedElem.nextElementSibling.classList.contains('main-nav__sublist-wrapper--lvl-2') ) {
-      // clickedElem.nextElementSibling.style.display = 'block';
-      clickedElem.nextElementSibling.classList.toggle('main-nav__sublist-wrapper--open');
-    }
+  if (menu) {
 
+    menu.addEventListener('click', function(e) {
+      var clickedElem = e.target;
+      if (clickedElem.nextElementSibling && clickedElem.nextElementSibling.classList.contains('main-nav__sublist-wrapper--lvl-2') ) {
+        // clickedElem.nextElementSibling.style.display = 'block';
+        clickedElem.nextElementSibling.classList.toggle('main-nav__sublist-wrapper--open');
+      }
+    });
 
-  });
+    menu.addEventListener('mouseover', function(e) {
+      var hoverElem = e.target;
+      if (hoverElem.nextElementSibling && hoverElem.nextElementSibling.classList.contains('main-nav__sublist-wrapper--lvl-2') ) {
+        // clickedElem.nextElementSibling.style.display = 'block';
+        hoverElem.nextElementSibling.classList.add('main-nav__sublist-wrapper--open');
+
+        setTimeout(function () {
+          hoverElem.nextElementSibling.classList.remove('main-nav__sublist-wrapper--open');
+        }, 3000);
+      }
+    });
+  }
+
 
 }());
 
@@ -181,6 +207,56 @@ $(document).ready(function(){
       }
     });
 
+  }
+
+
+}());
+
+(function(){
+  //Блок - Заявка на подключение
+  // var btnBlock = document.querySelector('.request__select-props');
+  var privatBtn = document.querySelector('label[for="privat"]');
+  var multistoryBtn = document.querySelector('label[for="apartment"]');
+  var officeBtn = document.querySelector('label[for="office"]');
+
+  // var selectBlock = document.querySelector('.request__select-rate');
+  var privatSelect = document.querySelector('#rate-privat');
+  var multistorySelect = document.querySelector('#rate-multistory');
+  var officeSelect = document.querySelector('#rate-office');
+
+  if (privatBtn) {
+    privatBtn.addEventListener('click', function(e) {
+      if (privatSelect.classList.contains('hidden')) {
+        privatSelect.children["0"].selected = true;
+        privatSelect.classList.remove('hidden');
+        multistorySelect.classList.add('hidden');
+        officeSelect.classList.add('hidden');
+      }
+    });
+  }
+
+
+  if (multistoryBtn) {
+    multistoryBtn.addEventListener('click', function(e) {
+      if (multistorySelect.classList.contains('hidden')) {
+        multistorySelect.children["0"].selected = true;
+        multistorySelect.classList.remove('hidden');
+        privatSelect.classList.add('hidden');
+        officeSelect.classList.add('hidden');
+      }
+    });
+  }
+
+
+  if (officeBtn) {
+    officeBtn.addEventListener('click', function(e) {
+      if (officeSelect.classList.contains('hidden')) {
+        officeSelect.children["0"].selected = true;
+        officeSelect.classList.remove('hidden');
+        privatSelect.classList.add('hidden');
+        multistorySelect.classList.add('hidden');
+      }
+    });
   }
 
 

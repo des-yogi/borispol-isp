@@ -24,7 +24,7 @@
     "autoprefixer": "^8.0.0",
     "browser-sync": "^2.18.8",
     "const": "^1.0.0",
-    "cross-env": "^5.0.0",
+    "cross-env": "^5.1.4",
     "css-mqpacker": "^6.0.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -43,7 +43,7 @@
     "gulp-real-favicon": "^0.2.2",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sequence": "^1.0.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.4.1",
@@ -53,13 +53,13 @@
     "gulp-wait": "0.0.2",
     "gulp.spritesmith": "^6.3.0",
     "husky": "^0.14.3",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^5.1.0",
     "lint-staged": "^6.1.0",
     "merge-stream": "^1.0.1",
     "mkdirp": "^0.5.1",
     "postcss-image-inliner": "^2.0.0",
     "postcss-import": "^11.0.0",
-    "postcss-inline-svg": "^3.0.0",
+    "postcss-inline-svg": "^3.1.1",
     "postcss-object-fit-images": "^1.1.2",
     "stylelint": "^8.2.0",
     "vinyl-buffer": "^1.0.0",
@@ -67,10 +67,11 @@
   },
   "dependencies": {
     "jquery": "^3.1.1",
+    "normalize.css": "^8.0.0",
     "object-fit-images": "^3.2.3",
-    "owl.carousel": "^2.2.0",
+    "owl.carousel": "^2.3.3",
+    "picturefill": "^3.0.2",
     "svg4everybody": "^2.1.8",
-    "swipejs": "^2.2.6",
-    "normalize.css": "^8.0.0"
+    "swipejs": "^2.2.6"
   }
 }

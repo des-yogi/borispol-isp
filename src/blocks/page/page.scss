@@ -210,11 +210,19 @@ textarea {
   font-family: inherit;
   font-size: 0.85em;
   color: inherit;
-  visibility: hidden;
+  //visibility: hidden;
 }
 
 .visible {
   visibility: visible;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-off {
+  display: block !important;
 }
 
 .visually-hidden {

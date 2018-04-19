@@ -73,7 +73,8 @@
     "coverage": [],
     "map": [],
     "rates": [],
-    "connect-request": []
+    "connect-request": [],
+    "tv-set": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
@@ -90,6 +91,7 @@
     "./src/scss/blocks-library.scss"
   ],
   "addJsBefore": [
+    "./node_modules/picturefill/dist/picturefill.js",
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
