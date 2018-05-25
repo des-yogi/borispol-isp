@@ -56,13 +56,24 @@
     }
 
     //JS Requirements
-    &.acc_active{
+    &.acc_active {
       > .acc_content{
         display: block;
       }
-      > .acc_head{
+      > .acc_head {
         background-color: $white;
         // border-bottom: 1px solid #ccc;
+      }
+
+      h2 {
+        color: $color-main;
+
+        &::before {
+          transform: rotate(-90deg);
+        }
+        &::after {
+          transform: rotate(-180deg);
+        }
       }
     }
   }
@@ -142,10 +153,28 @@
   }
 
   &__subtitle {
+    position: relative;
     margin-top: 0;
     margin-bottom: 0;
     // padding-top: 15px !important;
     font-size: 16px;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      content: "";
+      display: block;
+      height: 2px;
+      width: 22px;
+      background-color: currentColor;
+      transition: all 0.3s ease-in-out;
+    }
 
     @media(min-width: $screen-md) {
       font-size: 20px;
