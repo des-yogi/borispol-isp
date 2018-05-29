@@ -26,7 +26,7 @@
       cursor: pointer;
 
       @media(min-width: $screen-md) {
-        padding: 30px !important;
+        padding: 30px;
       }
 
       h3 {
@@ -125,7 +125,7 @@
     // overflow: hidden;
 
     @media(min-width: $screen-xl) {
-      margin-left: -30px;
+      // margin-left: -30px;
     }
   }
 
@@ -149,7 +149,7 @@
   &__subtitle,
   &__content {
     padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-right: 65px !important;
   }
 
   &__subtitle {
@@ -177,6 +177,8 @@
     }
 
     @media(min-width: $screen-md) {
+      padding-left: 30px !important;
+      padding-right: 65px !important;
       font-size: 20px;
     }
 
