@@ -68,11 +68,8 @@
       h2 {
         color: $color-main;
 
-        &::before {
-          transform: rotate(-90deg);
-        }
         &::after {
-          transform: rotate(-180deg);
+          transform: rotate(0);
         }
       }
     }
@@ -174,6 +171,10 @@
       width: 22px;
       background-color: currentColor;
       transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(-90deg);
     }
 
     @media(min-width: $screen-md) {

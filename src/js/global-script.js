@@ -34,6 +34,8 @@ $(document).ready(function(){
     // autoplayHoverPause: true,
     responsive:{
       0:{
+        margin: 15,
+
         nav: false
       },
       768:{
@@ -57,6 +59,7 @@ $(document).ready(function(){
     // autoplayHoverPause: true,
     responsive:{
       0:{
+        margin: 15,
         nav: false
       },
       768:{

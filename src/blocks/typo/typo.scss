@@ -381,10 +381,16 @@ a {
 
   &:hover {
     text-decoration: underline;
+    text-decoration-color: inherit;
     text-decoration-skip: ink;
   }
 
   &:visited {
     // color: $color-violet;
   }
+}
+
+li > a,
+p > a {
+  color: $color-main;
 }
