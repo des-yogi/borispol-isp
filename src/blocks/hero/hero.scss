@@ -1,7 +1,3 @@
-// В этом файле должны быть стили для БЭМ-блока hero, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .hero {
   margin-bottom: 30px;
   // background: radial-gradient(circle 200vw at -50% 50%, #08D4B3 0%, #452FBA 100%);
@@ -216,12 +212,15 @@
     margin-top: 0;
     pointer-events: none;
 
-    & > div {
+    & > button {
       position: relative;
       width: 35px;
       height: 55px;
-      background-color: $white;
       pointer-events: auto;
+
+      & span {
+        display: none;
+      }
 
       &::before {
         position: absolute;
@@ -234,6 +233,20 @@
         height: 22px;
         border-top: 3px solid rgba(0, 0, 0, 0.35);
         border-right: 3px solid rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    .owl-prev,
+    .owl-next {
+      background-color: rgba(255, 255, 255, 0.35) !important;
+
+      &:hover,
+      &:active {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+      }
+
+      &:focus {
+        outline: none;
       }
     }
 
