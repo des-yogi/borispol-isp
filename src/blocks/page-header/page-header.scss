@@ -1,7 +1,3 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-header {
 
   @media (min-width: $screen-md) {
@@ -41,6 +37,7 @@
     @media (min-width: $screen-xl) {
       flex-wrap: nowrap;
       height: 80px;
+      border: none;
     }
   }
 }

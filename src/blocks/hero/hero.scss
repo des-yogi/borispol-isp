@@ -162,14 +162,6 @@
     background-position: 50% 50%;
     background-size: contain;
 
-    /* img {
-      display: inline-block;
-      width: auto;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
-    } */
-
     @media (min-width: $screen-md) {
       width: 40%;
       margin-top: auto;
@@ -216,7 +208,9 @@
       position: relative;
       width: 35px;
       height: 55px;
+      background-color: $white !important;
       pointer-events: auto;
+      opacity: 0.5;
 
       & span {
         display: none;
@@ -233,6 +227,17 @@
         height: 22px;
         border-top: 3px solid rgba(0, 0, 0, 0.35);
         border-right: 3px solid rgba(0, 0, 0, 0.35);
+      }
+
+      span { display: none; }
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:focus {
+        outline: none;
+        opacity: 0.9;
       }
     }
 
