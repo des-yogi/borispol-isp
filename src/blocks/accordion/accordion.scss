@@ -26,7 +26,8 @@
       cursor: pointer;
 
       @media(min-width: $screen-md) {
-        padding: 30px !important;
+        padding-left: 30px !important;
+        padding-right: 30px;
       }
 
       h3 {
@@ -56,13 +57,17 @@
     }
 
     //JS Requirements
-    &.acc_active{
+    &.acc_active {
       > .acc_content{
         display: block;
       }
-      > .acc_head{
+      > .acc_head {
         background-color: $white;
         // border-bottom: 1px solid #ccc;
+
+        &::after {
+          transform: rotate(0);
+        }
       }
     }
   }
@@ -113,9 +118,9 @@
     // max-width: 100%;
     // overflow: hidden;
 
-    @media(min-width: $screen-xl) {
+    /* @media(min-width: $screen-xl) {
       margin-left: -30px;
-    }
+    } */
   }
 
   &__item {
@@ -141,13 +146,55 @@
     padding-right: 15px !important;
   }
 
-  &__subtitle {
+  /* &__subtitle {
     margin-top: 0;
     margin-bottom: 0;
     // padding-top: 15px !important;
     font-size: 16px;
 
     @media(min-width: $screen-md) {
+      font-size: 20px;
+    }
+
+    @media(min-width: $screen-lg) {
+      font-size: 22px;
+    }
+  } */
+
+  &__subtitle {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 50px !important;
+    font-size: 16px;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      content: "";
+      display: block;
+      height: 2px;
+      width: 22px;
+      background-color: currentColor;
+      transition: all 0.3s ease-in-out;
+
+      @media(min-width: $screen-md) {
+        right: 30px;
+      }
+    }
+
+    &::after {
+      transform: rotate(270deg);
+    }
+
+    @media(min-width: $screen-md) {
+      padding-right: 60px !important;
       font-size: 20px;
     }
 

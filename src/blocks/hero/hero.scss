@@ -216,12 +216,13 @@
     margin-top: 0;
     pointer-events: none;
 
-    & > div {
+    & > button {
       position: relative;
       width: 35px;
       height: 55px;
-      background-color: $white;
+      background-color: $white !important;
       pointer-events: auto;
+      opacity: 0.5;
 
       &::before {
         position: absolute;
@@ -234,6 +235,17 @@
         height: 22px;
         border-top: 3px solid rgba(0, 0, 0, 0.35);
         border-right: 3px solid rgba(0, 0, 0, 0.35);
+      }
+
+      span { display: none; }
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:focus {
+        outline: none;
+        opacity: 0.9;
       }
     }
 
