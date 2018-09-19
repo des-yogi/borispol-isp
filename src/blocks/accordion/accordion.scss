@@ -69,6 +69,14 @@
           transform: rotate(0);
         }
       }
+
+      h2 {
+        color: $color-main;
+
+        &::after {
+          transform: rotate(0);
+        }
+      }
     }
   }
 }
@@ -114,15 +122,6 @@
     }
   }
 
-  &__accordion {
-    // max-width: 100%;
-    // overflow: hidden;
-
-    /* @media(min-width: $screen-xl) {
-      margin-left: -30px;
-    } */
-  }
-
   &__item {
     margin-bottom: 20px;
     background-color: $white;
@@ -143,23 +142,8 @@
   &__subtitle,
   &__content {
     padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-right: 65px !important;
   }
-
-  /* &__subtitle {
-    margin-top: 0;
-    margin-bottom: 0;
-    // padding-top: 15px !important;
-    font-size: 16px;
-
-    @media(min-width: $screen-md) {
-      font-size: 20px;
-    }
-
-    @media(min-width: $screen-lg) {
-      font-size: 22px;
-    }
-  } */
 
   &__subtitle {
     position: relative;

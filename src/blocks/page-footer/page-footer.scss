@@ -157,6 +157,10 @@
       color: $color-success;
     }
 
+    @media (min-width: $screen-sm) {
+      width: 100%;
+    }
+
     @media (min-width: $screen-md) {
       width: auto;
       margin-bottom: 0;
@@ -188,6 +192,10 @@
           background: currentColor;
         }
       }
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 22px;
     }
 
     @media (min-width: $screen-md) {

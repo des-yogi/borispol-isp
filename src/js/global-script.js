@@ -34,6 +34,8 @@ $(document).ready(function(){
     // autoplayHoverPause: true,
     responsive:{
       0:{
+        margin: 15,
+
         nav: false
       },
       768:{
@@ -57,6 +59,7 @@ $(document).ready(function(){
     // autoplayHoverPause: true,
     responsive:{
       0:{
+        margin: 15,
         nav: false
       },
       768:{
@@ -109,10 +112,10 @@ $(document).ready(function(){
 (function(){
   // Анимация панели телефонов
   var phoneClickPlace = document.querySelector('.user-nav__phone-list');
-  var screenWidth = document.documentElement.clientWidth;
   // var otherPlace = document.querySelectorAll('body');
+  var isMobile = window.isMobile.any;
 
-  if (phoneClickPlace) {
+  if (phoneClickPlace && isMobile) {
 
     phoneClickPlace.addEventListener('click', function (e) {
       if ( !phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
@@ -124,16 +127,20 @@ $(document).ready(function(){
         }
     });
 
+  } else {
+    // is-desktop detected
     phoneClickPlace.addEventListener('mouseover', function (e) {
       if ( !phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
         phoneClickPlace.classList.add('user-nav__phone-list--open');
         phoneClickPlace.classList.remove('user-nav__phone-list--close');
       }
+    });
 
-      setTimeout(function () {
-        phoneClickPlace.classList.add('user-nav__phone-list--close');
+    phoneClickPlace.addEventListener('mouseout', function (e) {
+      if ( phoneClickPlace.classList.contains('user-nav__phone-list--open') ) {
         phoneClickPlace.classList.remove('user-nav__phone-list--open');
-      }, 5000);
+        phoneClickPlace.classList.add('user-nav__phone-list--close');
+      }
     });
   }
 
@@ -146,7 +153,6 @@ $(document).ready(function(){
       phoneClickPlace.classList.add('user-nav__phone-list--close');
       phoneClickPlace.classList.remove('user-nav__phone-list--open');
     }
-
   });
 
 }());
@@ -279,3 +285,13 @@ $(document).ready(function(){
 // ready(function(){
 //   // code
 // });
+
+(function(){
+  var isMobile = window.isMobile;
+  if (isMobile.any) {
+    console.log('Это мобильный!');
+  } else {
+      console.log('Это десктоп!');
+  }
+
+}());

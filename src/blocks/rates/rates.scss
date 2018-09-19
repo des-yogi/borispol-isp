@@ -1,7 +1,3 @@
-// В этом файле должны быть стили для БЭМ-блока rates, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .rates {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -315,6 +311,7 @@
 
         &:nth-child(2) {
           width: 15%;
+          text-align: center;
         }
 
         &:nth-child(3) {
