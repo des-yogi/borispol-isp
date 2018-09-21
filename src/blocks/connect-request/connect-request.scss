@@ -1,9 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока connect-request, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .connect-request {
-
 
   $block-name:                &; // #{$block-name}__element
 
@@ -68,21 +63,19 @@
     label {
       cursor: pointer;
     }
-
-    #agreement {
-      display: none;
-    }
   }
 
   &__agreement {
     position: relative;
     display: block;
+    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 40px;
-    margin-top: 20px;
-    font-size: 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
     color: $white;
+    cursor: pointer;
 
     &:before,
     &:after {
@@ -92,7 +85,7 @@
     }
 
     &:before {
-      top: 3px;
+      top: 8px;
       left: 0;
       width: 24px;
       height: 24px;
@@ -104,25 +97,29 @@
       text-decoration: underline;
 
       &:after {
-        top: 4px;
+        top: 9px;
         left: 0;
         content: "+";
         width: 24px;
         height: 24px;
         font-size: 45px;
-        color: $color-violet;
+        color: $text-color;
         transform: rotate(45deg);
         opacity: 0.7;
       }
     }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
-  #agreement:checked + label[for=agreement] {
+  /* #agreement:checked + label[for=agreement] {
     &:after {
       position: absolute;
       content: "";
       display: block;
-      top: 4px;
+      top: 9px;
       left: 0;
       content: "+";
       width: 24px;
@@ -132,5 +129,5 @@
       transform: rotate(45deg);
       opacity: 0.7;
     }
-  }
+  } */
 }

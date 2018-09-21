@@ -1,7 +1,3 @@
-// В этом файле должны быть стили для БЭМ-блока request, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .request {
   margin-bottom: 30px;
 
@@ -430,6 +426,11 @@
       $columns: $grid-columns,
       $gutter:  $grid-gutter-width
     )
+
+    @media (min-width: $screen-xl) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
 
   &__address {
@@ -470,4 +471,38 @@
     }
   }
 
+  &__agreement {
+    text-align: left;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+
+      &::after {
+        color: $text-color;
+      }
+    }
+  }
+
+}
+
+#agreement {
+  display: none;
+}
+
+#agreement:checked + label[for=agreement] {
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 9px;
+    left: 0;
+    content: "+";
+    width: 24px;
+    height: 24px;
+    font-size: 45px;
+    color: $text-color;
+    transform: rotate(45deg);
+    opacity: 0.7;
+  }
 }
