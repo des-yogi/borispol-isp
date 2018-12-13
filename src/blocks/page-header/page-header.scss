@@ -1,8 +1,17 @@
 .page-header {
+  position: relative;
+  z-index: 100;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $screen-md) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-xl) {
+    box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.25);
   }
 
   $block-name:                &; // #{$block-name}__element
