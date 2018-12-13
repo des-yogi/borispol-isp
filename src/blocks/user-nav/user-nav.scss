@@ -15,85 +15,108 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    // height: 100px;
-    // overflow: hidden;
-    padding-top: 15px;
-    padding-bottom: 18px;
+    padding-top: 10px;
+    padding-bottom: 0;
 
     @media (min-width: $screen-md) {
       position: relative;
-      width: auto;
+      align-items: flex-start;
+      min-width: 500px;
       height: auto;
-      max-width: 70%;
-      padding-top: 16px;
+      max-width: 80%;
+      padding-bottom: 10px;
+      // padding-top: 16px;
     }
-
-    /* &--open {
-      animation: phone-open 3.7s ease-in-out 1 both;
-
-      @media (min-width: $screen-md) {
-        animation: none;
-      }
-    }
-
-    &--close {
-      animation: phone-close 3.7s ease-in-out 1 both;
-
-      @media (min-width: $screen-md) {
-        animation: none;
-      }
-    } */
   }
 
   &__phone-list {
     position: relative;
+    // height: 70px;
     margin: 0;
     padding: 0;
     list-style: none;
     color: $white;
+    // overflow-y: hidden;
 
     @media (min-width: $screen-md) {
-      min-width: 135px;
+      min-width: 230px;
+      width: calc(50% - 10px);
+      padding-left: 65px;
+
+      &::before {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        content: "";
+        display: block;
+        width: 46px;
+        height: 46px;
+        border: 2px solid $white;
+        border-radius: $border-radius;
+        pointer-events: none;
+      }
     }
 
     &--sale {
       width: 42%;
-      height: 80px;
+      //height: 80px;
       overflow: hidden;
 
       @media (min-width: $screen-md) {
         position: absolute;
         z-index: 10;
-        width: auto;
+        /* width: auto;
+        min-width: 190px; */
         height: auto;
         overflow: hidden;
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
         padding-right: 15px;
         background: none;
+
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Ephone-icon%3C/title%3E%3Cpath d='M21.56,23.5l1.71-1.71a2.86,2.86,0,0,0,.63-2.67l-.12-.36a3.37,3.37,0,0,0-2.06-1.95L18.56,16a3.09,3.09,0,0,0-2.7.71l-1.14,1.14A12.11,12.11,0,0,1,6.2,9.28L7.34,8.14A3.08,3.08,0,0,0,8,5.45L7.18,2.29a3.37,3.37,0,0,0-2-2.06L4.87.11A2.86,2.86,0,0,0,2.21.74L.5,2.45A3.18,3.18,0,0,0,0,3.62,20.15,20.15,0,0,0,20.33,24,3.18,3.18,0,0,0,21.56,23.5Z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 22px 22px;
+        }
       }
     }
 
     &--open {
-        height: 195px;
-        background: none;
-        animation: phone-open 0.2s ease 1 both;
+      height: 200px;
+      background: none;
+      animation: phone-open 0.2s ease 1 both;
+
+      &::before {
+        background-color: $white;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2360B3F4' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Ephone-icon%3C/title%3E%3Cpath d='M21.56,23.5l1.71-1.71a2.86,2.86,0,0,0,.63-2.67l-.12-.36a3.37,3.37,0,0,0-2.06-1.95L18.56,16a3.09,3.09,0,0,0-2.7.71l-1.14,1.14A12.11,12.11,0,0,1,6.2,9.28L7.34,8.14A3.08,3.08,0,0,0,8,5.45L7.18,2.29a3.37,3.37,0,0,0-2-2.06L4.87.11A2.86,2.86,0,0,0,2.21.74L.5,2.45A3.18,3.18,0,0,0,0,3.62,20.15,20.15,0,0,0,20.33,24,3.18,3.18,0,0,0,21.56,23.5Z'/%3E%3C/svg%3E") !important;
+      }
 
       @media (min-width: $screen-md) {
-        height: 175px;
+        min-height: 170px;
         background: radial-gradient(261.60px at 0% 0%, #57A6F0 0%, #6DC4F8 100%);
+        box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.25);
         animation: block-open 0.2s ease 1 both;
+      }
+
+      @media (min-width: $screen-xl) {
+        min-height: 185px;
       }
     }
 
     &--close {
-      height: 80px;
+      height: 70px;
       overflow: hidden;
       background: none;
       animation: phone-close 0.2s ease 1 both;
 
       @media (min-width: $screen-md) {
-        height: 50px;
+        min-height: 60px;
         animation: block-close 0.2s ease 1 both;
+      }
+
+      @media (min-width: $screen-xl) {
+        min-height: 65px;
       }
     }
 
@@ -102,10 +125,15 @@
       padding-left: 10%;
 
       @media (min-width: $screen-md) {
-        width: auto;
-        min-width: 290px;
-        padding-left: 8%;
-        margin-left: 160px;
+        margin-left: auto;
+
+        &::before {
+          // background: url(../img/phone-24h-icon.svg);
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpolygon points='22.39 6.48 25.05 6.48 25.05 2.37 24.92 2.58 22.39 6.48' fill='none'/%3E%3Cpath d='M14.15,1.81a1.65,1.65,0,0,1,1.27-.49,1.42,1.42,0,0,1,1.09.43,1.59,1.59,0,0,1,.41,1.14A2.1,2.1,0,0,1,16.61,4a8.12,8.12,0,0,1-1,1.32L12.2,8.87V10H19V8.69H14.31L16.78,6.1a8.76,8.76,0,0,0,1.4-1.84,3.31,3.31,0,0,0,.43-1.55,2.46,2.46,0,0,0-.86-2A3.47,3.47,0,0,0,15.43,0a3.94,3.94,0,0,0-1.81.4,2.89,2.89,0,0,0-1.2,1.12A3.16,3.16,0,0,0,12,3.14h1.69A1.89,1.89,0,0,1,14.15,1.81Z'/%3E%3Cpath d='M26.74,6.48V.14H25L20.62,6.8l0,1H25V10h1.69V7.8H28V6.48ZM25,6.48H22.39l2.53-3.9L25,2.36Z'/%3E%3Cpath d='M23.77,18.77a3.37,3.37,0,0,0-2.06-1.95L18.56,16a3.09,3.09,0,0,0-2.7.71l-1.14,1.14A12.11,12.11,0,0,1,6.2,9.28L7.34,8.14A3.08,3.08,0,0,0,8,5.45L7.18,2.29a3.37,3.37,0,0,0-2-2.06L4.87.11A2.86,2.86,0,0,0,2.21.74L.5,2.45A3.18,3.18,0,0,0,0,3.62,20.15,20.15,0,0,0,20.33,24a3.18,3.18,0,0,0,1.22-.5l1.71-1.71a2.86,2.86,0,0,0,.63-2.67Z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 22px 22px;
+        }
       }
     }
   }
@@ -114,21 +142,17 @@
     font-size: 16px;
 
     &:first-child {
-      margin-bottom: 15px;
+      margin-bottom: 0;
 
       @media (min-width: $screen-md) {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
       }
     }
 
-    &:nth-child(n+2) {
-
-      @media (min-width: $screen-sm) {
-        padding-left: 40px;
-      }
+    &:nth-child(1n+3) {
 
       @media (min-width: $screen-md) {
-        padding-left: 50px;
+        margin-top: 13px;
       }
     }
   }
@@ -136,26 +160,17 @@
   &__text {
     position: relative;
     display: block;
-    padding-left: 40px;
+    min-height: 36px;
+    margin-bottom: 15px;
     font-size: 14px;
 
-    &::before {
-      position: absolute;
-      top: 4px;
-      left: 0;
-      content: "";
-      display: block;
-      width: 30px;
-      height: 30px;
+    br {
+      display: none;
     }
 
     @media (min-width: $screen-md) {
-      padding-left: 50px;
-      // padding-top: 5px;
-
-      br {
-        display: none;
-      }
+      min-height: 20px;
+      margin-bottom: 0;
     }
 
     &--sale {
@@ -165,23 +180,9 @@
         text-decoration: underline;
         text-decoration-skip: ink;
       }
-
-      &::before {
-        background: url(../img/phone-icon.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: 30px 30px;
-      }
     }
 
     &--support {
-
-      &::before {
-        background: url(../img/phone-24h-icon.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: 30px 30px;
-      }
 
       @media (min-width: $screen-md) {
         display: none;
@@ -245,14 +246,42 @@
   }
 
   &__utils-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border: 2px solid $white;
+    border-radius: $border-radius;
     color: $white;
+    transition: all 0.3s ease-out;
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      fill: currentColor;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $white;
+
+      svg {
+        fill: $color-main;
+      }
+    }
 
     &--lang {
       position: relative;
       padding-right: 20px;
+      width: auto;
+      height: auto;
       font-size: 26px;
       font-weight: 500;
+      border: none;
 
       &::after {
         position: absolute;
@@ -266,6 +295,11 @@
         border-left-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
+      }
+
+      &:hover,
+      &:focus {
+        background: none;
       }
     }
   }

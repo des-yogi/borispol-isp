@@ -2,7 +2,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  background-color: #FAF7FF;
 
   .owl-dots {
     margin-top: 15px !important;
@@ -27,7 +26,7 @@
 
     @media (min-width: $screen-xl) {
       text-align: left;
-      padding-left: 100px;
+      padding-left: 15px;
     }
   }
 
@@ -93,12 +92,12 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    border: 2px solid #EBEBEB;
-    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   &__item-link {
@@ -137,7 +136,8 @@
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: inherit;
-    text-align: center;
+    //text-align: left;
+    background-color: $light-bg-color;
   }
 
   &__subtitle {
@@ -168,7 +168,7 @@
 
     svg {
       fill: currentColor;
-      transform: rotate(-90deg) translateX(3px);
+        transform: rotate(-90deg) translateX(3px);
     }
   }
 

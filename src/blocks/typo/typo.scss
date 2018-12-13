@@ -29,6 +29,7 @@ $border-radius:               5px !default;
 
 /* roboto-regular - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -38,6 +39,7 @@ $border-radius:               5px !default;
 }
 /* roboto-italic - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
@@ -47,6 +49,7 @@ $border-radius:               5px !default;
 }
 /* roboto-500 - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -56,6 +59,7 @@ $border-radius:               5px !default;
 }
 /* roboto-700 - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -66,6 +70,7 @@ $border-radius:               5px !default;
 
 /* pt-sans-regular - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -75,6 +80,7 @@ $border-radius:               5px !default;
 }
 /* pt-sans-italic - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: italic;
   font-weight: 400;
@@ -84,6 +90,7 @@ $border-radius:               5px !default;
 }
 /* pt-sans-700 - latin_cyrillic-ext */
 @font-face {
+  font-display: swap;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
@@ -147,7 +154,6 @@ h1 {
 
   @media (min-width: $screen-xl) {
     text-align: left;
-    padding-left: 35px;
   }
 }
 

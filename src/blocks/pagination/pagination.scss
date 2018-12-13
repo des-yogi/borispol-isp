@@ -1,51 +1,87 @@
-// В этом файле должны быть стили для БЭМ-блока pagination, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$line-height:                 1.375em !default;
-
-$text-color:                  hsl(0, 0%, 10%) !default;
-
-$border-color:                hsl(0, 0%, 60%) !default;
+/*Стили для пагинации*/
 
 .pagination {
-
-  $block-name:                &; // #{$block-name}__element
-
   display: flex;
   flex-wrap: wrap;
-  margin-top: $line-height;
-  margin-bottom: $line-height;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  padding-left: 0;
+  font-family: "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+  list-style-type: none;
 
-  &__item {
-    display: block;
-    padding: 0.5em;
-    min-width: 2.5em;
-    border: 1px solid $border-color;
-    text-decoration: none;
-    text-align: center;
-    color: $text-color;
+  li {
+    margin-bottom: 0;
 
-    & + & {
-      border-left: 0;
-    }
+    &:first-child {
+      a,
+      span {
+        margin-right: 15px;
+      }
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $text-color;
-    }
-
-    @at-root a#{&} {
-
-      &:hover,
-      &:focus {
-        background-color: $gray-lightest;
+      svg {
+        fill: currentColor;
+        transform: rotate(90deg);
       }
     }
 
-    &--active {
-      background-color: $gray-lightest;
+    &:last-child {
+      a,
+      span {
+        margin-left: 15px;
+      }
+
+      svg {
+        fill: currentColor;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  li.active {
+    a {
+      color: $white;
+      background-color: $color-main;
+    }
+  }
+
+  li.disabled {
+    span {
+      color: #849399;
+      background-color: $white;
+    }
+
+    svg {
+      opacity: 0.5;
+    }
+  }
+
+  a,
+  span {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    color: #849399;
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+    background-color: $white;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $color-main;
+    }
+
+    @media (min-width: $screen-sm) {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
     }
   }
 }
