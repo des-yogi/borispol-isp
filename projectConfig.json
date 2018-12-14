@@ -59,7 +59,8 @@
     "map": [],
     "rates": [],
     "connect-request": [],
-    "tv-set": []
+    "tv-set": [],
+    "downcount": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
@@ -71,8 +72,7 @@
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [
-  ],
+  "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/ismobilejs/isMobile.min.js",
     "./node_modules/picturefill/dist/picturefill.js",
@@ -82,6 +82,7 @@
     "./node_modules/object-fit-images/dist/ofi.js"
   ],
   "addJsAfter": [
+    "./src/js/jquery.downCount.js",
     "./src/js/global-script.js"
   ],
   "addImages": [

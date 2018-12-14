@@ -121,6 +121,20 @@ $border-radius:               5px !default;
     }
   }
 
+  &--options {
+    width: 100% !important;
+    max-width: 385px;
+    // background: $white;
+    // color: $text-color;
+    @media (min-width: $screen-md) {
+      max-width: 255px;
+    }
+
+    @media (min-width: $screen-xl) {
+      min-width: 0;
+    }
+  }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;
