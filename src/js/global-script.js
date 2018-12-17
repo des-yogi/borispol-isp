@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
   $("#hero-slider").owlCarousel({
     items: 1,
@@ -102,11 +102,20 @@ $(document).ready(function(){
 
   });
 
+  $('.countdown').downCount({
+    date: '12/31/2018 24:00:00', //формат m:d:Y
+    offset: +2 // зимнее время +2, летнее +3
+  }, function () {
+    //alert('Время истекло!');
+  });
+
 });
 
 (function(){
   // Анимация панели телефонов
   var phoneClickPlace = document.querySelector('.user-nav__phone-list');
+  var supportPhone = document.querySelector('.user-nav__tel-link--support');
+  var supportPhoneList = document.querySelector('.user-nav__phone-list--support');
   // var otherPlace = document.querySelectorAll('body');
   var isMobile = window.isMobile.any;
 
@@ -136,6 +145,15 @@ $(document).ready(function(){
         phoneClickPlace.classList.remove('user-nav__phone-list--open');
         phoneClickPlace.classList.add('user-nav__phone-list--close');
       }
+    });
+  }
+
+  if (supportPhone && !isMobile) {
+    supportPhone.addEventListener('mouseover', function () {
+      supportPhoneList.classList.add('user-nav__phone-list--support-hovered');
+    });
+    supportPhone.addEventListener('mouseout', function () {
+      supportPhoneList.classList.remove('user-nav__phone-list--support-hovered');
     });
   }
 
