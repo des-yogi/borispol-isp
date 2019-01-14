@@ -23,6 +23,23 @@
     padding-right: 125px;
   }
 
+  table {
+    width: 100%;
+    margin-bottom:25px;
+
+    td {
+      vertical-align: top;
+
+      &:first-child {
+        width: 100px;
+
+        @media (min-width: $screen-md) {
+          width: 120px;
+        }
+      }
+    }
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &__article {
