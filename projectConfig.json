@@ -60,7 +60,9 @@
     "rates": [],
     "connect-request": [],
     "tv-set": [],
-    "downcount": []
+    "downcount": [],
+    "antivirus": [],
+    "antivirus-product": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
