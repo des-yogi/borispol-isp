@@ -56,14 +56,16 @@
   }
 
   100% {
-    height: 285px;
+    //height: 285px;
+    height: 100vh;
     overflow: visible;
   }
 }
 
 @keyframes menu-close {
   0% {
-    height: 285px;
+    //height: 285px;
+    height: 100vh;
   }
 
   0,1% {

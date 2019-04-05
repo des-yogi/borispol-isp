@@ -30,7 +30,6 @@ $(document).ready(function() {
     responsive:{
       0:{
         margin: 15,
-
         nav: false
       },
       768:{
@@ -109,6 +108,42 @@ $(document).ready(function() {
     //alert('Время истекло!');
   });
 
+  $(function() {
+    $('#menu-main').metisMenu({
+      toggle: false
+    });
+  });
+
+});
+
+$(document).ready(function() {
+  $("#reviews-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 40,
+    dots: true,
+    nav: true,
+    //autoHeight: true,
+    responsiveClass: true,
+    responsive: {
+      0:{
+        dots: true,
+        nav: false
+      },
+      768:{
+        dots: true,
+        nav: false
+      },
+      1200:{
+        dots: false,
+        nav: true
+      }
+    }
+    // autoplay: true,
+    // autoplayTimeout: 3000,
+    // autoplayHoverPause: true
+
+  });
 });
 
 (function(){
@@ -170,7 +205,7 @@ $(document).ready(function() {
 
 }());
 
-(function(){
+/*(function(){
 
   var screenWidth = document.documentElement.clientWidth;
   // var mainNav = document.getElementById('main-nav');
@@ -202,7 +237,7 @@ $(document).ready(function() {
   }
 
 
-}());
+}());*/
 
 (function(){
   // modal, выбор тарифа и отправка формы
@@ -308,3 +343,35 @@ $(document).ready(function() {
   }
 
 }());
+
+(function(){
+
+  // Добавление/удаление модификаторов при клике на переключение видимости
+  var toggler = document.getElementById('main-nav-toggler');
+
+  if(toggler){
+    toggler.addEventListener('click', mainNavToggle);
+
+    function mainNavToggle(e) {
+      //e.preventDefault();
+      toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
+      //document.querySelector('.topbar-nav').classList.toggle('topbar-nav--open');
+      var nav = $('.topbar-nav');
+      var animateTime = 500;
+      if(nav.height() === 0){
+      autoHeightAnimate(nav, animateTime);
+      } else {
+        nav.stop().animate({ height: '0' }, animateTime);
+      }
+    }
+  }
+
+  function autoHeightAnimate(element, time){
+    var curHeight = element.height(), // Get Default Height
+    autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+    element.height(curHeight); // Reset to Default Height
+    element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
+  }
+
+}());
+
