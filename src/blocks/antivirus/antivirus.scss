@@ -1,0 +1,110 @@
+.antivirus {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .col-intro {
+    @include col(xs,12);
+    @include col(md,6);
+    @include col(xl,5);
+
+    &:last-child {
+      @include col-offset(xl,1);
+      @include col(xl,6);
+    }
+  }
+
+  .col-text {
+    @include col(xs,12);
+    @include col-offset(md,1);
+    @include col(md,10);
+    @include col-offset(lg,0);
+    @include col(lg,7);
+  }
+
+  .col-img {
+    @include col(xs,12);
+    @include col(lg,5);
+    margin-top: 25px;
+    text-align: center;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      margin-top: 30px;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: baseline;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+      max-width: 372px;
+    }
+  }
+
+  &__title {
+    @include col(xs,8);
+    @include col(sm,9);
+    @include col(md,10);
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    color: $color-antivirus;
+  }
+
+  &__logo {
+    @include col(xs,4);
+    @include col(sm,3);
+    @include col(md,2);
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 150px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__intro {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__features {
+    padding: 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: $screen-md) {
+      padding: 30px;
+    }
+  }
+
+  &__features-title {
+    margin-top: 0;
+  }
+
+  &__features-list {
+
+  }
+
+  &__features-item {
+
+  }
+}

@@ -20,7 +20,7 @@
 
         <div class="container  content  tv-set">
 
-          <h1 class="content__title  tv-set__title">Телевидение</h1>
+          <h1 class="content__title  tv-set__title  tv-set__title--trinity">Телевидение</h1>
 
           <article class="row-full  tv-set__block">
 
@@ -102,12 +102,18 @@
 
                 <div class="tv-set__icons">
                   <div class="tv-set__icon-movie">
-                    <img src="img/movie-ico.jpg" alt="Movie" width="78"  height="81">
-                    <span>Кинозал</span>
+                    <!-- <img src="img/movie-ico.svg" alt="Movie" width="78"  height="71"> -->
+                    <svg class="tv-set__movie  tv-set__movie--omega" width="78" height="71">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#movie-ico"></use>
+                    </svg>
+                    <span class="tv-set__icons-title">Кинозал</span>
                   </div>
                   <div class="tv-set__icon-tv">
-                   <img src="img/tv-ico.jpg" alt="TV" width="78"  height="104">
-                    <span>163 канала</span>
+                   <!-- <img src="img/tv-ico.svg" alt="TV" width="78"  height="98"> -->
+                    <svg class="tv-set__tv  tv-set__tv--omega" width="78" height="98">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tv-ico"></use>
+                    </svg>
+                    <span class="tv-set__icons-title">163 канала</span>
                   </div>
 
                 </div>

@@ -60,14 +60,19 @@
     "rates": [],
     "connect-request": [],
     "tv-set": [],
-    "downcount": []
+    "downcount": [],
+    "antivirus": [],
+    "antivirus-product": [],
+    "metismenu": [],
+    "about": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+    "../../node_modules/metismenu/dist/metisMenu.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -79,6 +84,7 @@
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
+    "./node_modules/metismenu/dist/metisMenu.js",
     "./node_modules/object-fit-images/dist/ofi.js"
   ],
   "addJsAfter": [
