@@ -75,9 +75,17 @@
                     <input id="inet-service" type="radio" name="service-type" checked>
                     <label class="btn  btn--services" for="inet-service"><span>Интернет</span>
                     </label>
-                    <input id="tv-service" type="radio" name="service-type">
+                    <!-- <input id="tv-service" type="radio" name="service-type">
                     <label class="btn  btn--services" for="tv-service"><span>Телевидение</span>
-                    </label>
+                    </label> -->
+                    <span class="dropdown">
+                      <button class="dropdown__toggler  btn  btn--services" id="dropdown-demo-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Телевидение</span></button>
+                      <span class="dropdown__menu" aria-labelledby="dropdown-demo-2">
+                        <span class="dropdown__item"><a class="dropdown__link" href="#">Пункт списка 1</a></span>
+                        <span class="dropdown__item"><a class="dropdown__link" href="#">Пункт списка 2</a></span>
+                      </span>
+                    </span>
+
                   </div>
 
                   <div class="request__select-props">

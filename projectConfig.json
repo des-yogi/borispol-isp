@@ -64,7 +64,8 @@
     "antivirus": [],
     "antivirus-product": [],
     "metismenu": [],
-    "about": []
+    "about": [],
+    "dropdown": []
   },
   "addCssBefore": [
     "../../node_modules/normalize.css/normalize.css",
