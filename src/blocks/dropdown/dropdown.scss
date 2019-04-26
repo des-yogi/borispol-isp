@@ -4,6 +4,27 @@
 
   position: relative;
   display: inline-block;
+  color: #849399;
+
+  &__toggler {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      right: 20px;
+      top: 46%;
+      transform-origin: center;
+      transform: translate(0, -46%) rotate(-135deg);
+      width: 8px;
+      height: 8px;
+      border-width: 1px 0 0 1px;
+      border-style: solid;
+      border-color: currentColor;
+      transition: transform $transition-time;
+    }
+  }
 
   &__menu {
     position: absolute;
@@ -50,6 +71,13 @@
   }
 
   &--open & {
+
+    &__toggler {
+
+      &::before {
+        transform: translate(0, -15%) rotate(45deg);
+      }
+    }
 
     &__menu {
       z-index: 1;
