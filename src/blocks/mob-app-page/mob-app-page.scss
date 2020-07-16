@@ -1,0 +1,76 @@
+.mob-app-page {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: 992px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    font-size: 23px;
+    font-weight: 700;
+
+    &--footer {
+      margin-top: 40px;
+    }
+  }
+
+  &__advantages {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(292.93deg, #01ADEF 0%, #22429F 91.45%);
+
+    @media (min-width: 992px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .row {
+      margin-bottom: -30px;
+
+      @media (min-width: 992px) {
+        margin-bottom: -40px;
+      }
+    }
+  }
+
+  &__advantages-col {
+    @include col(xs, 6);
+    @include col(md, 4);
+    @include col(lg, 2, 10);
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 768px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__advantages-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__advantages-caption {
+    margin-top: 0;
+    font-weight: 700;
+    text-align: center;
+    color: $white;
+  }
+}

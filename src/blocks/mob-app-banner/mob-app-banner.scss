@@ -1,0 +1,114 @@
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.mob-app-banner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: linear-gradient(307.79deg, #01ADEF 0%, #22429F 91.45%);
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col(lg, 6);
+  }
+
+  &__text {
+    color: $white;
+  }
+
+  &__title {
+    padding-left: 0 !important;
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: left;
+    text-transform: none;
+    color: inherit;
+
+    @media (min-width: $screen-lg) {
+      font-size: 40px;
+    }
+  }
+
+  &__app-links {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    //align-items: center;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__app-link {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn-list {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__btn-item {
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    display: block;
+    width: 140px;
+    height: 40px;
+    padding: 8px 15px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left 16px center;
+    transform: scale(1);
+
+    &:hover,
+    &:focus {
+      animation: pulse 0.5s infinite;
+    }
+
+    &--app-store {
+      background-size: 99px 25px;
+      background-image: svg-load('../blocks/mob-app-banner/bg-img/app-store-btn-img.svg', fill=$white);
+    }
+
+    &--g-play {
+      background-size: 99px 25px;
+      background-image: svg-load('../blocks/mob-app-banner/bg-img/g-play-btn-img.svg', fill=$white);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 535px;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

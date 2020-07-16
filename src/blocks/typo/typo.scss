@@ -377,12 +377,12 @@ a {
   font-size: inherit;
   font-weight: inherit;
   text-decoration: none;
+  text-decoration-skip-ink: auto;
   // color: $color-main;
 
   &:hover {
     text-decoration: underline;
     text-decoration-color: inherit;
-    text-decoration-skip: ink;
   }
 
   &:visited {
